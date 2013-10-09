@@ -27,9 +27,9 @@ public class comparison {
        twohand.displayhandtwo();
         
         
-     if(player.firsthand() > playertwo.secondhand())
+     if(onehand.firsthand() > twohand.secondhand())
         {System.out.println("Player one wins");}
-     else if(player.firsthand() == playertwo.secondhand())
+     else if(onehand.firsthand() == twohand.secondhand())
         {System.out.println("Tie");}
      else {System.out.println("Player two wins");}
     }
