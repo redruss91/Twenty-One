@@ -15,11 +15,14 @@ public class comparison {
     
     @SuppressWarnings("empty-statement")
     
-    public void playercomp(){
-     if(player.total > playertwo.secondhand())
+    public static void main(String[] args){
+        
+    public void compare(){
+     if(player.firsthand() > playertwo.secondhand())
         {System.out.println("Player one wins");}
      else if(player.firsthand() == playertwo.secondhand())
         {System.out.println("Tie");}
      else {System.out.println("Player two wins");}
     }
+}
 }
