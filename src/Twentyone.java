@@ -28,7 +28,7 @@ public class Twentyone {
 
         
      comparison compare = new comparison();
-        compare.main();
+        compare.playercomp();
         
         
     }

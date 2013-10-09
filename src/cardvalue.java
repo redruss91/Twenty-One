@@ -18,8 +18,8 @@ public class cardvalue {
   
     
 public int firsthand() {
- playeroneOne = (int) randNum;  //call input from different class of player one's hand
- playeroneTwo = (int) randNumtwo;
+ this.playeroneOne = randNum;  //call input from different class of player one's hand
+ this.playeroneTwo = randNumtwo;
         return (playeroneOne + playeroneTwo);
 }
 
