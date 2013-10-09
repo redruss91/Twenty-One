@@ -17,7 +17,20 @@ public class comparison {
     
     public static void main(String[] args){
         
-    public void compare(){
+        comparison hand = new comparison();
+        
+        hand.playercomp();
+        
+     cardvalue onehand = new cardvalue();
+        onehand.firsthand();
+        onehand.displayhandone();
+        
+     cardvaluetwo twohand = new cardvaluetwo();
+       twohand.secondhand();
+       twohand.displayhandtwo();
+    }
+    
+    public void playercomp(){
      if(player.firsthand() > playertwo.secondhand())
         {System.out.println("Player one wins");}
      else if(player.firsthand() == playertwo.secondhand())
@@ -25,4 +38,4 @@ public class comparison {
      else {System.out.println("Player two wins");}
     }
 }
-}
+

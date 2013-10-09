@@ -14,7 +14,7 @@ public class cardvalue {
     int playeroneTwo = 0;//represent the two cards in player One's hand.
     int randNum = (int) (Math.random()*11);
     int randNumtwo = (int) (Math.random()*11);
-    int total = randNum + randNumtwo;
+    
   
     
 public int firsthand() {
