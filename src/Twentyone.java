@@ -25,13 +25,7 @@ public class Twentyone {
         myGame.getName();
         myGame.displayHelp();
         
-     cardvalue onehand = new cardvalue();
-        onehand.firsthand();
-        onehand.displayhandone();
-        
-     cardvaluetwo twohand = new cardvaluetwo();
-       twohand.secondhand();
-       twohand.displayhandtwo();
+
         
      comparison compare = new comparison();
         compare.playercomp();
