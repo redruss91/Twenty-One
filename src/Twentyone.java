@@ -34,7 +34,7 @@ public class Twentyone {
        twohand.displayhandtwo();
         
      comparison compare = new comparison();
-        compare.playercomp();
+        compare.();
         
         
     }
