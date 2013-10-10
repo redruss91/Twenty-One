@@ -44,7 +44,8 @@ else if(one.playeroneOne == 10)
 
 public void findtwo() {
     comparison one = new comparison();
-        
+    
+    
         
 if(one.playeroneTwo == 1 || one.playeroneTwo == 11)
     {System.out.println("and an ace.");}

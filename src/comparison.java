@@ -16,6 +16,7 @@ public class comparison {
     int playertwoTwo = (int) (Math.random()*11);
     int playeroneOne =  (int) (Math.random()*11);
     int playeroneTwo =  (int) (Math.random()*11);
+    double mynum = (double)playeroneTwo;
     
     public void playercomp(){
 
@@ -26,7 +27,7 @@ public class comparison {
        {System.out.println("P1 WINS!!!");}
        else if(this.playeroneOne + this.playeroneTwo < this.playertwoOne + this.playertwoTwo)
        {System.out.println("P2 WINS!!!");}
-       else {System.out.println("**Error**");}
+       else {System.out.println(playeroneOne + "**Error**");}
     }
 }
 
