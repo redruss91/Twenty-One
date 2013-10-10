@@ -9,29 +9,24 @@
  * @author Riley
  */
 public class comparison {
-    cardvalue player = new cardvalue();
-    
-    cardvaluetwo playertwo = new cardvaluetwo();
-    
+ 
     @SuppressWarnings("empty-statement")
     
-
+    int playertwoOne = (int) (Math.random()*11);
+    int playertwoTwo = (int) (Math.random()*11);
+    int playeroneOne =  (int) (Math.random()*11);
+    int playeroneTwo =  (int) (Math.random()*11);
     
     public void playercomp(){
-    cardvalue onehand = new cardvalue();
-        onehand.firsthand();
-        onehand.displayhandone();
-        
-     cardvaluetwo twohand = new cardvaluetwo();
-       twohand.secondhand();
-       twohand.displayhandtwo();
-        
-        
-     if(onehand.firsthand() > twohand.secondhand())
-        {System.out.println("Player one wins");}
-     else if(onehand.firsthand() == twohand.secondhand())
-        {System.out.println("Tie");}
-     else {System.out.println("Player two wins");}
+
+    
+       if (this.playertwoOne + this.playertwoTwo == this.playeroneOne + this.playeroneTwo)
+       {System.out.println("TIE!!!");}
+       else if(this.playeroneOne + this.playeroneTwo > this.playertwoOne + this.playertwoTwo)
+       {System.out.println("P1 WINS!!!");}
+       else if(this.playeroneOne + this.playeroneTwo < this.playertwoOne + this.playertwoTwo)
+       {System.out.println("P2 WINS!!!");}
+       else {System.out.println("**Error**");}
     }
 }
 

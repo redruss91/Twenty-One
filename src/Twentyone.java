@@ -18,15 +18,23 @@ public class Twentyone {
             + "____________________________________________\n"
             + "Players have to try to get as close to 21\n"
             + "as possible without going over.\n"
-            + "They can hit (recieve more cards) or stay (keep cards).";
+            + "They can hit (recieve more cards) or stay (keep cards).\n";
     
     public static void main(String[] args) {
      Twentyone myGame = new Twentyone();
         myGame.getName();
         myGame.displayHelp();
         
-
-        
+       report tell = new report();
+      tell.find();
+     tell.findtwo();
+      tell.displayhandone();
+      
+      reporttwo telltwo = new reporttwo();
+      telltwo.findtwoOne();
+     telltwo.findtwoTwo();
+      telltwo.displayhandtwo();
+                
      comparison compare = new comparison();
         compare.playercomp();
         
