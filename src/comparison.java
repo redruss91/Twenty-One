@@ -24,23 +24,23 @@ public class comparison {
  
     
 
+
 public void playercomp(){
              
      if (this.playertwoOne + this.playertwoTwo == this.playeroneOne + this.playeroneTwo)
        {System.out.println("TIE!!!");}
-       
+         
        else if(this.playeroneOne + this.playeroneTwo > this.playertwoOne + this.playertwoTwo)
+
        {System.out.println("P1 WINS!!!");}
-       
+     
        else if(this.playeroneOne + this.playeroneTwo < this.playertwoOne + this.playertwoTwo)
+
        {System.out.println("P2 WINS!!!");}
-       
-      else {System.out.println(this.playeroneOne + "**Error**");}
-    
-      
-    
-    }
- }
+          
+       else {System.out.println(this.playeroneOne + "**Error**");}
+
+ }}
         
 
     
