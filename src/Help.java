@@ -69,7 +69,7 @@ public class Help {
                 + "the options listed, or try typing in all lowercase.\n");
          }
         
-        System.out.println("To return to the hep menu, type 'menu'. To quit this\n"
+        System.out.println("To return to the help menu, type 'menu'. To quit this\n"
                 + "program, type 'quit'\n");
         other = input.next();
         
