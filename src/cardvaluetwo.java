@@ -19,10 +19,10 @@ public class cardvaluetwo { //player two's hand
     /**
      *
      */
-    public int secondhand() {
- playertwoOne = (int) randNum;//call input from different class of player two's hand
- playertwoTwo = (int) randNumtwo;
-        return (playertwoOne + playertwoTwo);
+    public void secondhand() {
+ this.playertwoOne = randNum;//call input from different class of player two's hand
+ this.playertwoTwo = randNumtwo;
+        int totalTwo = (playertwoOne + playertwoTwo);
 }
 
 

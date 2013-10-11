@@ -17,10 +17,10 @@ public class cardvalue {
     int total = randNum + randNumtwo;
   
     
-public int firsthand() {
- playeroneOne = (int) randNum;  //call input from different class of player one's hand
- playeroneTwo = (int) randNumtwo;
-        return (playeroneOne + playeroneTwo);
+public void firsthand() {
+ this.playeroneOne = randNum;  //call input from different class of player one's hand
+ this.playeroneTwo = randNumtwo;
+        int totalOne = (playeroneOne + playeroneTwo);
 }
 
 
