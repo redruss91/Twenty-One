@@ -13,27 +13,15 @@ public class reporttwo {
 public void findtwoOne() {
     comparison one = new comparison();
         
-if(one.playertwoOne == 1 || one.playertwoOne == 11)
+if(one.playertwoOne == 11 || one.playertwoOne == 1)
     {System.out.println("Player 2, you have in your hand an ace");}
-else if(one.playertwoOne == 2)
-    {System.out.println("Player 2, you have in your hand a 2");}
-else if(one.playertwoOne == 3)
-    {System.out.println("Player 2, you have in your hand a " + one.playertwoOne);}
-else if(one.playertwoOne == 4)
-    {System.out.println("Player 2, you have in your hand a " + one.playertwoOne);}
-else if(one.playertwoOne == 5)
-    {System.out.println("Player 2, you have in your hand a " + one.playertwoOne);}
-else if(one.playertwoOne == 6)
-    {System.out.println("Player 2, you have in your hand a " + one.playertwoOne);}
-else if(one.playertwoOne == 7)
-    {System.out.println("Player 2, you have in your hand a " + one.playertwoOne);}
-else if(one.playertwoOne == 8)
-    {System.out.println("Player 2, you have in your hand an " + one.playertwoOne);}
-else if(one.playertwoOne == 9)
+else if(one.playeroneOne + one.playeroneTwo > 21 && one.playertwoOne == 1)
+    {one.playertwoOne = 1; System.out.println("Player 2, you have in your hand an ace");}
+else if(one.playertwoOne >= 2 || one.playertwoOne < 10)
     {System.out.println("Player 2, you have in your hand a " + one.playertwoOne);}
 else if(one.playertwoOne == 10)
     {System.out.println("Player 2, you have in your hand a face card ");}
-
+else {System.out.println("error");}
 }
 
 
@@ -41,32 +29,40 @@ public void findtwoTwo() {
     comparison one = new comparison();
         
         
-if(one.playertwoTwo == 1 || one.playertwoTwo == 11)
+if(one.playertwoTwo == 11 || one.playertwoTwo == 1)
     {System.out.println("and an ace.");}
-else if(one.playertwoTwo == 2)
-    {System.out.println("and a 2.");}
-else if(one.playertwoTwo == 3)
-    {System.out.println("and a 3.");}
-else if(one.playertwoTwo == 4)
-    {System.out.println("and a 4.");}
-else if(one.playertwoTwo == 5)
-    {System.out.println("and a 5.");}
-else if(one.playertwoTwo == 6)
-    {System.out.println("and a 6.");}
-else if(one.playertwoTwo == 7)
-    {System.out.println("and a 7.");}
-else if(one.playertwoTwo == 8)
-    {System.out.println("and an 8.");}
-else if(one.playertwoTwo == 9)
-    {System.out.println("and a 9.");}
+
+else if(one.playertwoTwo + one.playertwoOne > 21 && one.playertwoTwo == 11)
+    {one.playertwoTwo = 1; System.out.println("and an ace.");}
+
+else if(one.playertwoTwo >= 2 || one.playertwoTwo < 10)
+    {System.out.println("and a " + one.playertwoTwo);}
+
 else if (one.playertwoTwo == 10)
     {System.out.println("and a face card.");}
 
+else {System.out.println("error");}
 }
 
 
+
+
 public void displayhandtwo(){ 
-System.out.println("You can choose to hit or stay. \n");
+    comparison one = new comparison();
+    
+    
+    if (one.playertwoOne + one.playertwoTwo > 21)
+    {System.out.println("BUST!");}
+    
+    else if (one.playertwoOne == 1 || one.playertwoOne == 11  && one.playertwoTwo == 10)
+    {System.out.println("21!\n");}
+    
+    else if (one.playertwoTwo == 1 || one.playertwoTwo == 11  && one.playertwoOne == 10)
+    {System.out.println("21!\n");}
+    
+    else {
+    System.out.println("\n You can choose to hit or stay. \n\n");}
+
 }
 
 
