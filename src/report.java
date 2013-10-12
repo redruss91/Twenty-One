@@ -8,8 +8,8 @@
  * @author rtbro_000
  */
 public class report {
- 
-       
+ int fine = 0;
+      double myDoubleNum = (double)fine;
     
    //Will also be used later to display cards. 
 public void find() {
