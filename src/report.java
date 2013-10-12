@@ -14,11 +14,10 @@ public class report {
    //Will also be used later to display cards. 
 public void find() {
     comparison one = new comparison();
-        
+       
         
 if(one.playeroneOne == 11)
     {System.out.println("Player 1, you have in your hand an ace");}
-
  
     else if(one.playeroneOne == 1)
     {System.out.println("and an ace."); one.playeroneOne = 11;}
@@ -40,6 +39,7 @@ if(one.playeroneOne == 11)
 public void findtwo() {
     comparison one = new comparison();
         
+ 
     if(one.playeroneTwo == 11 )
     {System.out.println("and an ace.");}
     

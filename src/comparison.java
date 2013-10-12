@@ -18,7 +18,7 @@ public class comparison {
     int playertwoOne = 9;
     int playertwoTwo = 7;  
      
-       
+    double val = (double)playeroneOne;
    
    
  
