@@ -95,4 +95,40 @@ public class cards {
     }
     }
     
+    public void demonstration(){
+        
+        Scanner input = new Scanner(System.in);
+        int count = 0;
+        
+        while (count < 1){
+        
+        System.out.println("Let's do a demonstration real quick. Let us assume\n"
+                + "that you are dealt an 8 and a King. As shown before, these two"
+                + "card values have values of " + this.eight + " points and "
+                + this.king + " points respectively.");
+        
+        double handTotal = (int) this.eight+this.king;
+        
+        System.out.println("In this case, the total amount of points you have in\n"
+                + "your hand is " + handTotal + " points. At this point you can\n"
+                + "choose to \"stay\", or keep the cards you have, or you can choose\n"
+                + "to \"hit\", or take an additional card. Would you like to repeat\n"
+                + "this description? Type \"Y\" for yes, or \"N\" for no.\n");
+        
+        String logic = input.next();
+        
+        if ("Y".equals(logic)){
+            count = 0
+        }
+        else if ("N".equals(logic)){
+            count = 1
+        }
+        else System.out.println("Error: Please enter a valid response: \"Y\" for yes\n"
+                + "or \"N\" for no\n");
+        }
+        
+        
+        
+    }
+    
 }

@@ -40,5 +40,11 @@ public void playercomp(){
           
        else {System.out.println(this.playeroneOne + "**Error**");}
 
- }}
+ }
+ public void hit(){
+     
+     
+    
+ }
+}
         
