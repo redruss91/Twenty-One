@@ -24,7 +24,13 @@ public class Twentyone {
      Twentyone myGame = new Twentyone();
         myGame.getName();
         myGame.displayHelp();
-        
+     
+        //Just so I knew that they would work.
+     //HelpMenuControl help = new HelpMenuControl();
+     //help.helptwo();
+     
+     //HelpMenuView helpview = new HelpMenuView();
+           
      report tell = new report();
         tell.find();
         tell.findtwo();

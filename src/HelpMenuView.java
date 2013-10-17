@@ -1,5 +1,4 @@
 
-import java.util.Scanner;
 
 /*
  * To change this template, choose Tools | Templates
@@ -10,7 +9,7 @@ import java.util.Scanner;
  *
  * @author kylerussell
  */
-public class Help {
+public class HelpMenuView {
     
     String description = "The game is based on the card game 21.\n" +
             "Players start with 2 cards and draw additional cards to\n" +
@@ -33,52 +32,15 @@ public class Help {
             + "9. If the player scores the same as the dealer then they tie.\n\n"
             + "10. If the player scores less than the dealer then they lose.\n";
     String menu;
-    
-    public static void main(String[] args){
-        
-        Help help1 = new Help();
-        help1.help2();
-    }
-    
-    public void help2(){
-        
-        int count = 0;
-        String other;
-        Scanner input = new Scanner(System.in);
-        while (count < 1){
-         while (count < 1){
-        System.out.println("Welcome to Help! Type 'description' for a description\n"
+    String welcome = "Welcome to Help! Type 'description' for a description\n"
                 + "of the game. Type 'goal' to find out what the goal of the\n"
-                + "game is. Type 'rules' to display the rules of the game\n\n");
-        
-        this.menu = input.next();
-        
-        System.out.println("\n");
-        
-        if ("rules".equals(this.menu)){
-            System.out.println(this.rules);
-            count++;
-        } else if ("goal".equals(this.menu)){
-            System.out.println(this.goal);
-            count++;
-        } else if ("description".equals(this.menu)){
-            System.out.println(this.description);
-            count++;
-        } else 
-            System.out.println("Error: Invalid input. Please select one of\n"
-                + "the options listed, or try typing in all lowercase.\n");
-         }
-        
-        System.out.println("To return to the help menu, type 'menu'. To quit this\n"
-                + "program, type 'quit'\n");
-        other = input.next();
-        
-        if ("menu".equals(other)){
-            count = 0;
-            System.out.println("\n");
-        }
-        }
-        
-    }
+                + "game is. Type 'rules' to display the rules of the game\n\n";
+    String error = "Error: Invalid input. Please select one of\n"
+                + "the options listed, or try typing in all lowercase.\n";
+  String goback = "To return to the help menu, type 'menu'. To quit this\n"
+                + "program, type 'quit'\n";
+  
+  
+  
     
 }

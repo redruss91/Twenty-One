@@ -118,10 +118,10 @@ public class cards {
         String logic = input.next();
         
         if ("Y".equals(logic)){
-            count = 0
+            count = 0;
         }
         else if ("N".equals(logic)){
-            count = 1
+            count = 1;
         }
         else System.out.println("Error: Please enter a valid response: \"Y\" for yes\n"
                 + "or \"N\" for no\n");
