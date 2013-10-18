@@ -21,26 +21,26 @@ public class HelpMenuControl {
         Scanner input = new Scanner(System.in);
         while (count < 1){
          while (count < 1){
-        System.out.println(forhelp.welcome);
+        forhelp.welcome();
         
         forhelp.menu = input.next();
         
         System.out.println("\n");
         
         if ("rules".equals(forhelp.menu)){
-            System.out.println(forhelp.rules);
+            forhelp.rules();
             count++;
         } else if ("goal".equals(forhelp.menu)){
-            System.out.println(forhelp.goal);
+            forhelp.goal();
             count++;
         } else if ("description".equals(forhelp.menu)){
-            System.out.println(forhelp.description);
+            forhelp.description();
             count++;
         } else 
-            System.out.println("");
+            forhelp.error();
          }
         
-        System.out.println("");
+        forhelp.goback();
         other = input.next();
         
         if ("menu".equals(other)){

@@ -40,6 +40,38 @@ public class HelpMenuView {
   String goback = "To return to the help menu, type 'menu'. To quit this\n"
                 + "program, type 'quit'\n";
   
+  public void description(){
+      
+      System.out.println(this.description);
+  }
+  
+  public void goal(){
+      
+      System.out.println(this.goal);
+  }
+  
+  public void rules(){
+      
+      System.out.println(this.rules);
+  }
+  
+  public void welcome(){
+      
+      System.out.println(this.welcome);
+  }
+  
+  public void error(){
+      
+      System.out.println(this.error);
+  }
+  
+  public void goback(){
+      
+      System.out.println(this.goback);
+  }
+  
+  
+  
   
   
     
