@@ -10,6 +10,11 @@ import java.util.Scanner;
  *
  * @author rtbro_000 & Kyle Russell
  */
+
+//riley created the class., and called HelpMenuView.java into this class.
+//Kyle Russell created the functions and the IF and WHile Functions, as well
+//as the user interaction.
+
 public class HelpMenuControl {
     HelpMenuView forhelp = new HelpMenuView();
     

@@ -9,6 +9,8 @@
  *
  * @author kylerussell
  */
+
+//Riley Created the class and added the variables
 public class HelpMenuView {
     
     String description = "The game is based on the card game 21.\n" +
@@ -39,6 +41,8 @@ public class HelpMenuView {
                 + "the options listed, or try typing in all lowercase.\n";
   String goback = "To return to the help menu, type 'menu'. To quit this\n"
                 + "program, type 'quit'\n";
+  
+  //Kyle Russell Added all FUnctions in this class
   
   public void description(){
       
