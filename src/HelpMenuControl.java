@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author rtbro_000
+ * @author rtbro_000 & Kyle Russell
  */
 public class HelpMenuControl {
     HelpMenuView forhelp = new HelpMenuView();
