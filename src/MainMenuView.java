@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -9,32 +12,47 @@
  */
 public class MainMenuView {
     
-    int menu = 0;
+    MainMenuControl MainMenu = new MainMenuControl();
+    mainGame Game = new mainGame();
+    HelpMenuControl help = new HelpMenuControl();
+    HelpMenuView helpTwo = new HelpMenuView();
     
-    String error = "Error: Invalid input. Please select one of\n"
-                + "the options listed.\n";
-    String goback = "To return to the help menu, type 'menu'. To quit this\n"
-                + "program, type 'quit'\n";
-    
-    public void descriptionMain(){
+    public void mainMenu(){
         
-        System.out.println("Welcome to the game 21! Please select one of the\n"
-                + "options below by entering the number next to your selection.");
+        int count = 0;
+        String other;
+        Scanner input = new Scanner(System.in);
+        while (count < 1){
+         while (count < 1){
+             
+             MainMenu.descriptionMain();
+             
+             MainMenu.menu = input.nextInt();
+             
+              System.out.println("\n");
         
-        System.out.println("1. New Game"
-                + "2. Help Menu"
-                + "3. Quit Game"
-                + "");
+        if (1 == MainMenu.menu){
+            Game.game();
+            count++;
+        } else if (2 == MainMenu.menu){
+            help.helptwo();
+            count++;
+        } else if (3 == MainMenu.menu){
+            count++;
+        } else 
+            MainMenu.error();
+         }
+        
+        MainMenu.goback();
+        other = input.next();
+        
+        if ("menu".equals(other)){
+            count = 0;
+            System.out.println("\n");
+        }
+             
+             
+         }
+        }
     }
     
-    public void error(){
-        
-        System.out.println(this.error);
-    }
-    
-    public void goback(){
-        
-        System.out.println("this.goback");
-    }
-    
-}
