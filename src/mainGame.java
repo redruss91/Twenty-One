@@ -11,6 +11,7 @@ public class mainGame {
     
     public void game(){
         
+        System.out.println("The function for this option was called");
     }
     
 }
