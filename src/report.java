@@ -70,11 +70,7 @@ public void displayhandone(){
     
     else if (one.playeroneTwo == 1 || one.playeroneTwo == 11  && one.playeroneOne == 10)
     {System.out.println("21!\n");}
-    
-    else {
-    System.out.println("\n You can choose to hit or stay. \n\n");}
-
-    
+     
     
     
     }

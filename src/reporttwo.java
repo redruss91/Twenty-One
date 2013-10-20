@@ -60,8 +60,6 @@ public void displayhandtwo(){
     else if (one.playertwoTwo == 1 || one.playertwoTwo == 11  && one.playertwoOne == 10)
     {System.out.println("21!\n");}
     
-    else {
-    System.out.println("\n You can choose to hit or stay. \n\n");}
 
 }
 

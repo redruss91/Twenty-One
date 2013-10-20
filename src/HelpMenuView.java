@@ -33,16 +33,15 @@ public class HelpMenuView {
             + "8. If the player scores more than the dealer then they win.\n\n"
             + "9. If the player scores the same as the dealer then they tie.\n\n"
             + "10. If the player scores less than the dealer then they lose.\n";
-    String menu;
-    String welcome = "Welcome to Help! Type 'description' for a description\n"
+    String welcome = "\n\tWelcome to Help! Type 'description' for a description\n"
                 + "of the game. Type 'goal' to find out what the goal of the\n"
                 + "game is. Type 'rules' to display the rules of the game\n\n";
     String error = "Error: Invalid input. Please select one of\n"
                 + "the options listed, or try typing in all lowercase.\n";
-  String goback = "To return to the help menu, type 'menu'. To quit this\n"
+    String goback = "To return to the help menu, type 'menu'. To quit this\n"
                 + "program, type 'quit'\n";
   
-  //Kyle Russell Added all FUnctions in this class
+  //Kyle Russell Added all functions in this class
   
   public void description(){
       

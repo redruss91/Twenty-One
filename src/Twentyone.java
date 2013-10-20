@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class Twentyone {
 
-   String name;
+    String name;
     String instructions = 
             "                  WELCOME TO 21\n"
             + "**____________________________________________**\n"
@@ -35,15 +35,17 @@ public class Twentyone {
         tell.find();
         tell.findtwo();
         tell.displayhandone();
-        
-        
+               
       reporttwo telltwo = new reporttwo();
         telltwo.findtwoOne();
         telltwo.findtwoTwo();
         telltwo.displayhandtwo();
                 
-     comparison compare = new comparison();
-       compare.playercomp();
+     Orders begin = new Orders();
+        begin.init();
+       
+      comparison compare = new comparison();
+      // compare.playercomp();
         
     }
 

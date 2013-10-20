@@ -1,44 +1,41 @@
 
 import java.util.Scanner;
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  *
  * @author rtbro_000 & Kyle Russell
  */
 
-//riley created the class., and called HelpMenuView.java into this class.
-//Kyle Russell created the functions and the IF and WHile Functions, as well
+//Riley created the class and called HelpMenuView.java into this class.
+//Kyle Russell created the functions and the If and While Functions, as well
 //as the user interaction.
 
 public class HelpMenuControl {
     HelpMenuView forhelp = new HelpMenuView();
-    
+    String decide;
     
       public void helptwo(){
-        
+      
         int count = 0;
         String other;
         Scanner input = new Scanner(System.in);
+        
         while (count < 1){
          while (count < 1){
-        forhelp.welcome();
+            forhelp.welcome();
         
-        forhelp.menu = input.next();
+        this.decide = input.next();
         
         System.out.println("\n");
         
-        if ("rules".equals(forhelp.menu)){
+        if ("rules".equals(this.decide)){
             forhelp.rules();
             count++;
-        } else if ("goal".equals(forhelp.menu)){
+        } else if ("goal".equals(this.decide)){
             forhelp.goal();
             count++;
-        } else if ("description".equals(forhelp.menu)){
+        } else if ("description".equals(this.decide)){
             forhelp.description();
             count++;
         } else 
