@@ -1,5 +1,4 @@
 
-import java.util.Random;
 import java.util.Scanner;
 
 /*
@@ -13,8 +12,6 @@ import java.util.Scanner;
  */
 public class Orders {
      report reporter = new report();
-     
-     
      comparison comptodo = new comparison();
      HelpMenuView forhelp = new HelpMenuView();
      HelpMenuControl exhelp = new HelpMenuControl();
@@ -22,38 +19,59 @@ public class Orders {
      String menu;
     
      
+     @SuppressWarnings("empty-statement")
+     
    public void init(){
-        Scanner input = new Scanner(System.in);
-         String other;
+       Scanner input = new Scanner(System.in);
+       String other;
        System.out.println("\nWhat do you want to do?");
        
         System.out.println("\n");
         
-       for(i=0; i< 2;){
+   for(i=0; i< 2;){
        this.menu = input.next(); 
     
       
     if("hit".equals(this.menu)){
-    reporter.find(); reporter.findtwo();
-        i=2;
+        
+    reporter.hitter();
+    reporter.displayhandone();
     }
-    else if("stay".equals(this.menu)){
-    //keep current cards. 
-        ++i;
-    }
+    
     else if ("help".equals(this.menu)){
     //start help sequence
         exhelp.helptwo();
-        ++i;
+        
     }
     else if ("quit".equals(this.menu)){
-    //exit game?
-        ++i;
+    //exit game? System.out.println("Thank you for playing");
+        i=2;
     }
     else if ("options".equals(this.menu)){
         
     System.out.println("\nYou can type: hit, stay, help, quit.");
+    
     }
+    
+    else if("stay".equals(this.menu)){
+     //stay ends game for player one.
+        
+        
+        if (comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit == comptodo.playeroneOne + comptodo.playeroneTwo + comptodo.playeroneHit)
+       {System.out.println("\nTIE!!!");}
+         
+            else if(comptodo.playeroneOne + comptodo.playeroneTwo + comptodo.playeroneHit > comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit)
+
+       {System.out.println("\nP1 WINS!!!");}
+     
+            else if(comptodo.playeroneOne + comptodo.playeroneTwo + comptodo.playeroneHit < comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit)
+
+       {System.out.println("\nP2 WINS!!!");}
+          
+            else {System.out.println("\n**Error**");}
+        i=2;//game ends
+        }
+    
     else{System.out.println("Error");}
     
        }

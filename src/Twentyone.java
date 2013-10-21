@@ -14,8 +14,8 @@ public class Twentyone {
 
     String name;
     String instructions = 
-            "                  WELCOME TO 21\n"
-            + "**____________________________________________**\n"
+          
+            "\n**____________________________________________**\n"
             + "Players have to try to get as close to 21\n"
             + "as possible without going over.\n"
             + "They can hit (recieve more cards) or stay (keep cards).\n";
@@ -25,7 +25,7 @@ public class Twentyone {
         myGame.getName();
         myGame.displayHelp();
      
-        //Just so I knew that they would work.
+     //Just so I knew that they would work.
      //HelpMenuControl help = new HelpMenuControl();
      //help.helptwo();
      
@@ -36,16 +36,16 @@ public class Twentyone {
         tell.findtwo();
         tell.displayhandone();
                
-      reporttwo telltwo = new reporttwo();
-        telltwo.findtwoOne();
-        telltwo.findtwoTwo();
-        telltwo.displayhandtwo();
+      //reporttwo telltwo = new reporttwo();
+        //telltwo.findtwoOne();
+        //telltwo.findtwoTwo();
+        //telltwo.displayhandtwo();
                 
      Orders begin = new Orders();
         begin.init();
        
         //something different to give final output...
-      //comparison compare = new comparison();
+        //comparison compare = new comparison();
         //compare.playercomp();
         
     }
@@ -58,7 +58,7 @@ this.name = input.next();
 
 
 public void displayHelp(){
-System.out.println("\nWelcome " + this.name + " to 21\n");
+System.out.println("\n\t      Welcome " + this.name + " to 21!!\n");
 System.out.println(this.instructions);
 
 }
