@@ -44,8 +44,9 @@ public class Twentyone {
      Orders begin = new Orders();
         begin.init();
        
-      comparison compare = new comparison();
-      // compare.playercomp();
+        //something different to give final output...
+      //comparison compare = new comparison();
+        //compare.playercomp();
         
     }
 

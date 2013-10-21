@@ -1,4 +1,5 @@
 
+import java.util.Random;
 import java.util.Scanner;
 
 /*
@@ -11,12 +12,15 @@ import java.util.Scanner;
  * Created by Riley Brown
  */
 public class Orders {
-    
-    
+     report reporter = new report();
+     
+     
+     comparison comptodo = new comparison();
      HelpMenuView forhelp = new HelpMenuView();
      HelpMenuControl exhelp = new HelpMenuControl();
      int i = 0;
      String menu;
+    
      
    public void init(){
         Scanner input = new Scanner(System.in);
@@ -30,8 +34,8 @@ public class Orders {
     
       
     if("hit".equals(this.menu)){
-    //add another card to the players hand.
-        ++i;
+    reporter.find(); reporter.findtwo();
+        i=2;
     }
     else if("stay".equals(this.menu)){
     //keep current cards. 
