@@ -13,11 +13,11 @@ public class comparison {
     Random random = new Random();
     int pick = random.nextInt(maxvalue) + 1;
     
-    int playeroneOne = pick; //creating random number for every time they are called. 
-    int playeroneTwo = pick;
-    int playeroneHit;
-    int playertwoOne = pick;
-    int playertwoTwo = pick;  
+    int playeroneOne = 11; //creating random number for every time they are called. 
+    int playeroneTwo = 6;
+    int playeroneHit= 7;
+    int playertwoOne = 5;
+    int playertwoTwo = 6;  
     int playertwoHit;
      
     double val = (double)playeroneOne;

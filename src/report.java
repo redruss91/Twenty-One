@@ -8,28 +8,32 @@
  * @author rtbro_000
  */
 public class report {
-   int fine = 0;
-      double myDoubleNum = (double)fine;
-    
-   //Will also be used later to display cards. 
-public void find() {
+   
     comparison one = new comparison();
+    int telltell = one.playeroneHit;
+    int tellone = one.playeroneOne;
+    int telltwo = one.playeroneTwo;
+   //Will also be used later to display cards. 
+    
+public void find() {
+    comparison flint = new comparison();
+  
      Twentyone imp = new Twentyone();
+       
+    if(tellone + telltwo > 21 && tellone == 11)
+    {flint.playeroneOne = 1; System.out.println(imp.name + ", you have in your hand an ace");}
         
-if(one.playeroneOne == 11)
+    else if(tellone == 11)
+    //name won't show up...?
     {System.out.println(imp.name + ", you have in your hand an ace");}
  
-    else if(one.playeroneOne == 1)
-    {System.out.println(imp.name + ", you have in your hand an ace"); one.playeroneOne = 11;}
+    else if(tellone == 1  && tellone + telltwo + telltell <= 21)
+    {System.out.println(imp.name + ", you have in your hand an ace"); tellone = 11;}
     
-    
-    else if(one.playeroneOne + one.playeroneTwo > 21 && one.playeroneOne == 1)
-    {one.playeroneOne = 1 ; System.out.println(imp.name + ", you have in your hand an ace");}
+    else if(tellone >= 2 && tellone < 10)
+    {System.out.println(imp.name + ", you have in your hand a " + tellone);}
 
-    else if(one.playeroneOne >= 2 && one.playeroneOne < 10)
-    {System.out.println(imp.name + ", you have in your hand a " + one.playeroneOne);}
-
-    else if(one.playeroneOne == 10)
+    else if(tellone == 10)
     {System.out.println(imp.name + ", you have in your hand a face card ");}
 
     else {System.out.println("error");}
@@ -37,22 +41,21 @@ if(one.playeroneOne == 11)
 
 
 public void findtwo() {
-    comparison one = new comparison();
+    comparison fire = new comparison();
         
- 
-    if(one.playeroneTwo == 11 )
+    if(tellone + telltwo > 21 && telltwo == 11)
+    {fire.playeroneTwo = 1; System.out.println("and an ace.");}
+    
+    else if(telltwo == 11 )
     {System.out.println("and an ace.");}
     
-    else if(one.playeroneTwo == 1)
-    {System.out.println("and an ace."); one.playeroneTwo = 11;}
+    else if(telltwo == 1 && tellone + telltwo + telltell <= 21)
+    {System.out.println("and an ace."); telltwo = 11;}
     
-    else if(one.playeroneTwo + one.playeroneOne > 21 && one.playeroneTwo == 11)
-    {one.playeroneTwo = 1; System.out.println("and an ace.");}
+    else if(telltwo >= 2 && telltwo < 10)
+    {System.out.println("and a " + telltwo);}
 
-    else if(one.playeroneTwo >= 2 && one.playeroneTwo < 10)
-    {System.out.println("and a " + one.playeroneTwo);}
-
-    else if (one.playeroneTwo == 10)
+    else if (telltwo == 10)
     {System.out.println("and a face card.");}
 
     else {System.out.println("error");}
@@ -60,22 +63,22 @@ public void findtwo() {
 
 
 public void hitter() {
-    comparison one = new comparison();
-        one.playeroneHit = one.pick;
- 
-    if(one.playeroneHit == 11 )
+    comparison fin = new comparison();
+        fin.playeroneHit = fin.pick;
+    
+    if(tellone + telltwo + telltell > 21 && telltell == 11)
+    {fin.playeroneTwo = 1; System.out.println("you receive ace.\n");}
+    
+    else if(telltell == 11 )
     {System.out.println("you recieve an ace.\n");}
     
-    else if(one.playeroneHit == 1)
-    {System.out.println("you receive an ace.\n"); one.playeroneHit = 11;}
+    else if(telltell == 1 && tellone + telltwo + telltell <= 21)
+    {System.out.println("you receive an ace.\n"); telltell = 11;}
     
-    else if(one.playeroneTwo + one.playeroneOne + one.playeroneHit > 21 && one.playeroneHit == 11)
-    {one.playeroneTwo = 1; System.out.println("you receive ace.\n");}
+    else if(this.telltell >= 2 && this.telltell < 10)
+    {System.out.println("you recieve a " + this.telltell +"\n");}
 
-    else if(one.playeroneHit >= 2 && one.playeroneHit < 10)
-    {System.out.println("you recieve a " + one.playeroneHit +"\n");}
-
-    else if (one.playeroneHit == 10)
+    else if (telltell == 10)
     {System.out.println("you receive a face card.\n");}
 
     else {System.out.println("**Error**\n");}
@@ -84,12 +87,13 @@ public void hitter() {
 
 
 public void displayhandone(){
-    comparison one = new comparison();
+    comparison too = new comparison();
+    Orders noob = new Orders();
     
-    if (one.playeroneOne + one.playeroneTwo + one.playeroneHit > 21)
-    {System.out.println("BUST!");}
+    if (telltell + tellone + telltwo > 21)
+    { noob.i=2; System.out.println("BUST!");}
     
-    else if (one.playeroneOne + one.playeroneTwo + one.playeroneHit == 21)
+    else if (too.playeroneOne + too.playeroneTwo + too.playeroneHit == 21)
     {System.out.println("21!\n");}
  
      
