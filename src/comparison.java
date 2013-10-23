@@ -21,10 +21,7 @@ public class comparison {
     int playertwoHit;
      
     double val = (double)playeroneOne;
-   
-   
- 
-    
+  
 
 
 public void playercomp(){

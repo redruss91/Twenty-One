@@ -67,19 +67,19 @@ public void hitter() {
         fin.playeroneHit = fin.pick;
     
     if(tellone + telltwo + telltell > 21 && telltell == 11)
-    {fin.playeroneTwo = 1; System.out.println("you receive ace.\n");}
+    {fin.playeroneTwo = 1; System.out.println("\nYou receive ace.\n");}
     
     else if(telltell == 11 )
-    {System.out.println("you recieve an ace.\n");}
+    {System.out.println("\nYou recieve an ace.\n");}
     
     else if(telltell == 1 && tellone + telltwo + telltell <= 21)
-    {System.out.println("you receive an ace.\n"); telltell = 11;}
+    {System.out.println("\nYou receive an ace.\n"); telltell = 11;}
     
     else if(this.telltell >= 2 && this.telltell < 10)
-    {System.out.println("you recieve a " + this.telltell +"\n");}
+    {System.out.println("\nYou recieve a " + this.telltell +"\n");}
 
     else if (telltell == 10)
-    {System.out.println("you receive a face card.\n");}
+    {System.out.println("\nYou receive a face card.\n");}
 
     else {System.out.println("**Error**\n");}
     }
@@ -95,16 +95,31 @@ public void displayhandone(){
     
     else if (too.playeroneOne + too.playeroneTwo + too.playeroneHit == 21)
     {System.out.println("21!\n");}
- 
-     
-    
+
     
     }
 
 
-
-
-
+public void bustin() {
+            comparison comptodo = new comparison();
+            Orders otto = new Orders();
+            //put this into a different class
+                if ((comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit) == (this.tellone + this.telltwo + this.telltell))
+                    {System.out.println("\nTIE!!!");}   
+                
+                else if(((this.tellone + this.telltwo + this.telltell) > (comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit)) 
+                        || (comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit) > 21)
+                    
+                     {System.out.println("\nP1 WINS!!! With " + (this.tellone + this.telltell + this.telltwo)+" points!");}    
+                
+                else if(((this.tellone + this.telltwo + this.telltell) < (comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit))
+                       && (this.tellone + this.telltwo + this.telltell) > 21)
+                    
+                    {System.out.println("\nP2 WINS!!!");}  
+                
+                else {System.out.println("\n**Error**"); otto.i=2;//game ends//}
+                
+                }}
 }
 
     

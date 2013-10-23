@@ -11,7 +11,7 @@ import java.util.Scanner;
  * Created by Riley Brown
  */
 public class Orders {
-     report reporter = new report();
+     
      comparison comptodo = new comparison();
      HelpMenuView forhelp = new HelpMenuView();
      HelpMenuControl exhelp = new HelpMenuControl();
@@ -22,6 +22,7 @@ public class Orders {
      @SuppressWarnings("empty-statement")
      
    public void init(){
+       report reporter = new report();
        Scanner input = new Scanner(System.in);
        String other;
        System.out.println(
@@ -41,7 +42,7 @@ public class Orders {
     
       
     if("hit".equals(this.menu)){
-    reporter.hitter(); 
+    reporter.hitter();
     reporter.displayhandone();
     System.out.println("You now have in your hand a " + comptodo.playeroneOne + " and a " + comptodo.playeroneTwo + " and a " + reporter.telltell);
     }    
@@ -49,29 +50,16 @@ public class Orders {
     //start help sequence
         exhelp.helptwo();   
     }
-    else if ("quit".equals(this.menu)){
-    System.out.println("Thank you for playing");
+    else if ("quit".equals(this.menu) || "end".equals(this.menu) || "exit".equals(this.menu)){
+    System.out.println("\nThank you for playing.");
         i=2; 
     }   
     else if("stay".equals(this.menu)){
       //reporter.telltell
         //stay ends game for player one.
-        if((reporter.tellone + reporter.telltwo + reporter.telltell) < 21) {
-           
-            //put this into a different class
-                if ((comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit) == (reporter.tellone + reporter.telltwo + reporter.telltell))
-                    {System.out.println("\nTIE!!!");}   
-                
-                else if((reporter.tellone + reporter.telltwo + reporter.telltell) > (comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit) && (comptodo.playeroneOne + comptodo.playeroneTwo + comptodo.playeroneHit) <= 21)
-                     {System.out.println("\nP1 WINS!!! With " + (reporter.tellone + reporter.telltell + reporter.telltwo)+" points!");}    
-                
-                else if((reporter.tellone + reporter.telltwo + reporter.telltell) < (comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit) && (comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit) <= 21)
-                    {System.out.println("\nP2 WINS!!!");}  
-                
-                else {System.out.println("\n**Error**"); i=2;//game ends//
-                }
-                }     
-       else{System.out.println("Bust!"); this.i=2; }//put here, the same IF as above. 
+        if((reporter.tellone + reporter.telltwo + reporter.telltell) < 21) { reporter.bustin();  }
+                 
+        else{System.out.println("Bust!"); this.i=2; reporter.bustin();}//put here, the same IF as above. 
       }
     
     else{System.out.println("Error");}
