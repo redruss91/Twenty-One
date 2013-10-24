@@ -26,6 +26,7 @@ public class Twentyone {
         myGame.getName();
         myGame.displayHelp();
         Twentyone.pauseProg();
+        
      //Just so I knew that they would work.
      //HelpMenuControl help = new HelpMenuControl();
      //help.helptwo();     
@@ -34,12 +35,12 @@ public class Twentyone {
      report tell = new report();
         tell.find();
         tell.findtwo();
-        
-               
+                       
       //reporttwo telltwo = new reporttwo();
         //telltwo.findtwoOne();
         //telltwo.findtwoTwo();
         //telltwo.displayhandtwo();
+        
         Twentyone.pauseProgram();
      Orders begin = new Orders();
         begin.init();

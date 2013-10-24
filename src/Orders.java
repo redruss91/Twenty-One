@@ -44,8 +44,9 @@ public class Orders {
     if("hit".equals(this.menu)){
     reporter.hitter();
     reporter.displayhandone();
-    System.out.println("You now have in your hand a " + comptodo.playeroneOne + " and a " + comptodo.playeroneTwo + " and a " + reporter.telltell);
+    System.out.println("You now have in your hand a " + comptodo.playeroneOne + " and a " + comptodo.playeroneTwo + " and a " + comptodo.playeroneHit);
     }    
+    
     else if ("help".equals(this.menu)){
     //start help sequence
         exhelp.helptwo();   
@@ -55,9 +56,9 @@ public class Orders {
         i=2; 
     }   
     else if("stay".equals(this.menu)){
-      //reporter.telltell
-        //stay ends game for player one.
-        if((reporter.tellone + reporter.telltwo + reporter.telltell) < 21) { reporter.bustin();  }
+      //comptodo.playeroneHit
+        //stay ends game for player comptodo.
+        if((comptodo.playeroneOne + comptodo.playeroneTwo + comptodo.playeroneHit) < 21) { reporter.bustin();}
                  
         else{System.out.println("Bust!"); this.i=2; reporter.bustin();}//put here, the same IF as above. 
       }

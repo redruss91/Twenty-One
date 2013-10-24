@@ -46,7 +46,7 @@ else {System.out.println("error");}
 
 public void hittertwo() {
     comparison one = new comparison();
-        one.playertwoHit = one.pick;
+     
  
     if(one.playertwoHit == 11 )
     {System.out.println("you recieve an ace.");}
