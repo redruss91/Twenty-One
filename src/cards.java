@@ -1,4 +1,5 @@
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /*
@@ -27,6 +28,8 @@ public class cards {
     
     String number;
     
+    
+    
     public static void main(String[] args){
        
         cards myGame = new cards();
@@ -37,62 +40,82 @@ public class cards {
     
     public void displayCardValue(){
         
-        int count = 0;
-        
-        while (count < 1){
+        boolean valid = false;
+        OUTER:
+        while (!valid) {
+            Scanner input = new Scanner(System.in);
+            System.out.println("Enter the card to see the point value.\n"
+                    + "Please type out any numbers. Digits will cause an error.\n");
+            this.number = input.next();
             
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter the card to see the point value.\n"
-                + "Please type out any numbers. Digits will cause an error.\n");
-        this.number = input.next();
-        
-        
-        
-        System.out.println("\n");
-        
-        if ("ace".equals(this.number)){
-            System.out.println("An Ace is equal to " + this.ace + " points\n");
-            count++;
-        } else if ("two".equals(this.number)) {
-            System.out.println("A Two is equal to " + this.two + " points\n");
-            count++;
-        } else if ("three".equals(this.number)){
-            System.out.println("A Three is equal to " + this.three + " points\n");
-            count++;
-        } else if ("four".equals(this.number)){
-            System.out.println("A Four is equal to " + this.four + " points\n");
-            count++;
-        } else if ("five".equals(this.number)){
-            System.out.println("A Five is equal to " + this.five + " points\n");
-            count++;
-        } else if ("six".equals(this.number)){
-            System.out.println("A Six is equal to " + this.six + " points\n");
-            count++;
-        } else if ("seven".equals(this.number)){
-            System.out.println("A Seven is equal to " + this.seven + " points\n");
-            count++;
-        } else if ("eight".equals(this.number)){
-            System.out.println("A Eight is equal to " + this.eight + " points\n");
-            count++;
-        } else if ("nine".equals(this.number)){
-            System.out.println("A Nine is equal to " + this.nine + " points\n");
-            count++;
-        } else if ("ten".equals(this.number)){
-            System.out.println("A Ten is equal to " + this.ten + " points\n");
-            count++;
-        } else if ("jack".equals(this.number)){
-            System.out.println("A Jack is equal to " + this.jack + " points\n");
-            count++;
-        } else if ("queen".equals(this.number)){
-            System.out.println("A Queen is equal to " + this.queen + " points");
-            count++;
-        } else if ("king".equals(this.number)){
-            System.out.println("A King is equal to " + this.king + " points\n");
-            count++;
-        } else System.out.println("Error: Invalid input. Please enter a card\n"
-                + "that can be found in a standard deck of 52 cards, typed in\n"
-                + "lowercase.\n");
-    }
+            
+            ArrayList<String> cards = new ArrayList<>();
+            cards.add("ace");
+            cards.add("two");
+            cards.add("three");
+            cards.add("four");
+            cards.add("five");
+            cards.add("six");
+            cards.add("seven");
+            cards.add("eight");
+            cards.add("nine");
+            cards.add("ten");
+            cards.add("jack");
+            cards.add("queen");
+            cards.add("king");
+            
+            if (!cards.contains(this.number)){
+                System.out.println("Error: Invalid input. Please enter a card\n"
+                        + "that can be found in a standard deck of 52 cards, typed in\n"
+                        + "lowercase.\n");
+                continue;
+            }
+            
+            
+            System.out.println("\n");
+            
+            switch (this.number) {
+                case "ace":
+                    System.out.println("An Ace is equal to " + this.ace + " points\n");
+                    break OUTER;
+                case "two":
+                    System.out.println("A Two is equal to " + this.two + " points\n");
+                    break OUTER;
+                case "three":
+                    System.out.println("A Three is equal to " + this.three + " points\n");
+                    break OUTER;
+                case "four":
+                    System.out.println("A Four is equal to " + this.four + " points\n");
+                    break OUTER;
+                case "five":
+                    System.out.println("A Five is equal to " + this.five + " points\n");
+                    break OUTER;
+                case "six":
+                    System.out.println("A Six is equal to " + this.six + " points\n");
+                    break OUTER;
+                case "seven":
+                    System.out.println("A Seven is equal to " + this.seven + " points\n");
+                    break OUTER;
+                case "eight":
+                    System.out.println("A Eight is equal to " + this.eight + " points\n");
+                    break OUTER;
+                case "nine":
+                    System.out.println("A Nine is equal to " + this.nine + " points\n");
+                    break OUTER;
+                case "ten":
+                    System.out.println("A Ten is equal to " + this.ten + " points\n");
+                    break OUTER;
+                case "jack":
+                    System.out.println("A Jack is equal to " + this.jack + " points\n");
+                    break OUTER;
+                case "queen":
+                    System.out.println("A Queen is equal to " + this.queen + " points");
+                    break OUTER;
+                default:
+                    System.out.println("A King is equal to " + this.king + " points\n");
+                    break OUTER;
+            }
+        }
     }
     
     public void demonstration(){
