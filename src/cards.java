@@ -40,16 +40,7 @@ public class cards {
     
     public void displayCardValue(){
         
-        boolean valid = false;
-        OUTER:
-        while (!valid) {
-            Scanner input = new Scanner(System.in);
-            System.out.println("Enter the card to see the point value.\n"
-                    + "Please type out any numbers. Digits will cause an error.\n");
-            this.number = input.next();
-            
-            
-            ArrayList<String> cards = new ArrayList<>();
+         ArrayList<String> cards = new ArrayList<>();
             cards.add("ace");
             cards.add("two");
             cards.add("three");
@@ -63,6 +54,14 @@ public class cards {
             cards.add("jack");
             cards.add("queen");
             cards.add("king");
+        
+        boolean valid = false;
+        OUTER:
+        while (!valid) {
+            Scanner input = new Scanner(System.in);
+            System.out.println("Enter the card to see the point value.\n"
+                    + "Please type out any numbers. Digits will cause an error.\n");
+            this.number = input.next();
             
             if (!cards.contains(this.number)){
                 System.out.println("Error: Invalid input. Please enter a card\n"
