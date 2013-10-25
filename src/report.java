@@ -102,6 +102,7 @@ public void bustin() {
             comparison comptodo = new comparison();
             Orders otto = new Orders(); //trying to end the game
             //put this into a different class
+            otto.i=2;//game ends//}
                 if ((comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit) == (one.playeroneOne + one.playeroneTwo + one.playeroneHit))
                     {System.out.println("\nTIE!!!");}   
                 
@@ -115,8 +116,9 @@ public void bustin() {
                     
                     {System.out.println("\nP2 WINS!!!");}  
                 
-                else {System.out.println("\n**Error**"); otto.i=2;//game ends//}
-                             }
+                else {System.out.println("\n**Error**");}
+                
+                             
               }
 }
 

@@ -36,7 +36,7 @@ public class Orders {
        
         System.out.println("\n");
         
-   for(i=0; i< 2;){
+   while(i< 2){
        
        this.menu = input.next(); 
     
@@ -58,7 +58,7 @@ public class Orders {
     else if("stay".equals(this.menu)){
       //comptodo.playeroneHit
         //stay ends game for player comptodo.
-        if((comptodo.playeroneOne + comptodo.playeroneTwo + comptodo.playeroneHit) < 21) { reporter.bustin();}
+        if((comptodo.playeroneOne + comptodo.playeroneTwo + comptodo.playeroneHit) < 21) { reporter.bustin(); this.i=2;}
                  
         else{System.out.println("Bust!"); this.i=2; reporter.bustin();}//put here, the same IF as above. 
       }
