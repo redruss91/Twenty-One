@@ -10,14 +10,16 @@
 public class report {
    
     comparison one = new comparison();
-  
+    boolean fore;
    //Will also be used later to display cards. 
     
 public void find() {
+    
     comparison flint = new comparison();
-  
-     Twentyone imp = new Twentyone();
-       
+    Twentyone imp = new Twentyone();
+    
+       for(fore = false; fore != true; ){
+           
     if(one.playeroneOne + one.playeroneTwo > 21 && one.playeroneOne == 11)
     {flint.playeroneOne = 1; System.out.println(imp.name + ", you have in your hand an ace");}
         
@@ -35,12 +37,19 @@ public void find() {
     {System.out.println(imp.name + ", you have in your hand a face card ");}
 
     else {System.out.println("error");}
-}
+    
+        fore = true;
+     }
+    }
+
 
 
 public void findtwo() {
     comparison fire = new comparison();
-        
+    
+     for(fore = false; fore != true; ){
+         
+       
     if(one.playeroneOne + one.playeroneTwo > 21 && one.playeroneTwo == 11)
     {fire.playeroneTwo = 1; System.out.println("and an ace.");}
     
@@ -57,15 +66,16 @@ public void findtwo() {
     {System.out.println("and a face card.");}
 
     else {System.out.println("error");}
+     fore = true;
+     }
     }
 
 
 public void hitter() {
-    comparison fin = new comparison();
-    fin.playeroneHit= fin.punt;
-    
+  
+     for(fore = false; fore != true; ){
     if(one.playeroneOne + one.playeroneTwo + one.playeroneHit > 21 && one.playeroneHit == 11)
-    {fin.playeroneTwo = 1; System.out.println("\nYou receive ace.\n");}
+    {one.playeroneTwo = 1; System.out.println("\nYou receive ace.\n");}
     
     else if(one.playeroneHit == 11 )
     {System.out.println("\nYou recieve an ace.\n");}
@@ -80,9 +90,10 @@ public void hitter() {
     {System.out.println("\nYou receive a face card.\n");}
 
     else {System.out.println("**Error**\n");}
+    
+    fore = true;
     }
-
-
+}
 
 public void displayhandone(){
     comparison too = new comparison();
@@ -101,8 +112,7 @@ public void displayhandone(){
 public void bustin() {
             comparison comptodo = new comparison();
             Orders otto = new Orders(); //trying to end the game
-            //put this into a different class
-            otto.i=2;//game ends//}
+           
                 if ((comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit) == (one.playeroneOne + one.playeroneTwo + one.playeroneHit))
                     {System.out.println("\nTIE!!!");}   
                 
@@ -112,7 +122,7 @@ public void bustin() {
                      {System.out.println("\nP1 WINS!!! With " + (one.playeroneOne + one.playeroneHit + one.playeroneTwo)+" points!");}    
                 
                 else if(((one.playeroneOne + one.playeroneTwo + one.playeroneHit) < (comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit))
-                       && (one.playeroneOne + one.playeroneTwo + one.playeroneHit) > 21)
+                       || (one.playeroneOne + one.playeroneTwo + one.playeroneHit) > 21)
                     
                     {System.out.println("\nP2 WINS!!!");}  
                 

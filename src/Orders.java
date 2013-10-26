@@ -17,7 +17,13 @@ public class Orders {
      HelpMenuControl exhelp = new HelpMenuControl();
      int i = 0;
      String menu;
-    
+    String lineup = "\n=============================="
+               + "\nWhat do you want to do?"
+               + "\n- hit - Gives you another card."
+               + "\n- stay - Keep your cards."
+               + "\n- help - Opens help menu."
+               + "\n- quit - Ends current game."
+            + "\n==============================\n";
      
      @SuppressWarnings("empty-statement")
      
@@ -25,26 +31,24 @@ public class Orders {
        report reporter = new report();
        Scanner input = new Scanner(System.in);
        String other;
-       System.out.println(
-               "\n=============================="
-               + "\nWhat do you want to do?"
-               + "\n- hit - Gives you another card."
-               + "\n- stay - Keep your cards."
-               + "\n- help - Opens help menu."
-               + "\n- quit - Ends current game."
-               + "\n==============================");
+      
+               
        
         System.out.println("\n");
         
    while(i< 2){
-       
+       System.out.println(this.lineup);
        this.menu = input.next(); 
     
       
     if("hit".equals(this.menu)){
+    comparison fin = new comparison();
+    fin.playeroneHit= fin.punt;
+    
     reporter.hitter();
     reporter.displayhandone();
     System.out.println("You now have in your hand a " + comptodo.playeroneOne + " and a " + comptodo.playeroneTwo + " and a " + comptodo.playeroneHit);
+    
     }    
     
     else if ("help".equals(this.menu)){
