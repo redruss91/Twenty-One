@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author kylerussell
  */
 public class cards {
-    String ace = "1 or11";
+    String ace = "1 or 11";
     int ace1 = 11;
     int two = 2;
     int three = 3;
