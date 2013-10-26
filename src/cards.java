@@ -12,7 +12,8 @@ import java.util.Scanner;
  * @author kylerussell
  */
 public class cards {
-    String ace = "1 or 11";
+    String ace = "1 or11";
+    int ace1 = 11;
     int two = 2;
     int three = 3;
     int four = 4;
@@ -120,30 +121,102 @@ public class cards {
     public void demonstration(){
         
         Scanner input = new Scanner(System.in);
-        int count = 0;
         
-        while (count < 1){
+        ArrayList<String> cards = new ArrayList<>();
+            cards.add("ace");
+            cards.add("two");
+            cards.add("three");
+            cards.add("four");
+            cards.add("five");
+            cards.add("six");
+            cards.add("seven");
+            cards.add("eight");
+            cards.add("nine");
+            cards.add("ten");
+            cards.add("jack");
+            cards.add("queen");
+            cards.add("king");
         
-        System.out.println("Let's do a demonstration real quick. Let us assume\n"
-                + "that you are dealt an 8 and a King. As shown before, these two"
-                + "card values have values of " + this.eight + " points and "
-                + this.king + " points respectively.");
+        boolean valid = false;
         
-        double handTotal = (int) this.eight+this.king;
+        
+        while (!valid){
+    
+        System.out.println("Welcome to the demonstration! As you know, in 21 you"
+                + "are dealt two random cards. ");
+        
+        int i = 0;
+        
+        String[] card = new String[2];
+        
+        int handTotal = 0;
+        
+        for(i = 0; i < card.length; i++){
+            System.out.println("Enter a card: \n");
+            card[i] = input.next();
+            
+            if (!cards.contains(card[i])){
+                System.out.println("Error: Invalid input. Please enter a card\n"
+                        + "that can be found in a standard deck of 52 cards, typed in\n"
+                        + "lowercase.\n");
+            }
+            switch (card[i]) {
+                case "ace":
+                    handTotal += this.ace1;
+                    break;
+                case "two":
+                    handTotal += this.two;
+                    break;
+                case "three":
+                    handTotal += this.three;
+                    break;
+                case "four":
+                    handTotal += this.four;
+                    break;
+                case "five":
+                    handTotal += this.five;
+                    break;
+                case "six":
+                    handTotal += this.six;
+                    break;
+                case "seven":
+                    handTotal += this.seven;
+                    break;
+                case "eight":
+                    handTotal += this.eight;
+                    break;
+                case "nine":
+                    handTotal += this.nine;
+                    break;
+                case "ten":
+                    handTotal += this.ten;
+                    break;
+                case "jack":
+                    handTotal += this.jack;
+                    break;
+                case "queen":
+                    handTotal += this.queen;
+                    break;
+                case "king":
+                    handTotal += this.king;
+                    break;
+            }
+        }
         
         System.out.println("In this case, the total amount of points you have in\n"
-                + "your hand is " + handTotal + " points. At this point you can\n"
-                + "choose to \"stay\", or keep the cards you have, or you can choose\n"
-                + "to \"hit\", or take an additional card. Would you like to repeat\n"
-                + "this description? Type \"Y\" for yes, or \"N\" for no.\n");
+                + "your hand based off of what you input is " + handTotal + " points.\n"
+                + " At this point you canchoose to \"stay\", or keep the cards\n"
+                + "you have, or you can choose to \"hit\", or take an additional\n"
+                + "card. Would you like to repeat this description? Type \"Y\" for yes,\n"
+                + "or \"N\" for no.\n");
         
         String logic = input.next();
         
         if ("Y".equals(logic)){
-            count = 0;
+            continue;
         }
         else if ("N".equals(logic)){
-            count = 1;
+            break;
         }
         else System.out.println("Error: Please enter a valid response: \"Y\" for yes\n"
                 + "or \"N\" for no\n");
