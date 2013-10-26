@@ -34,7 +34,7 @@ public class cards {
     public static void main(String[] args){
        
         cards myGame = new cards();
-        myGame.displayCardValue();
+        myGame.demonstration();
         
        
     }
@@ -143,7 +143,7 @@ public class cards {
         while (!valid){
     
         System.out.println("Welcome to the demonstration! As you know, in 21 you"
-                + "are dealt two random cards. ");
+                + " are dealt two random cards. ");
         
         int i = 0;
         
@@ -152,13 +152,15 @@ public class cards {
         int handTotal = 0;
         
         for(i = 0; i < card.length; i++){
-            System.out.println("Enter a card: \n");
+            System.out.println("\nEnter a card: \n");
             card[i] = input.next();
             
             if (!cards.contains(card[i])){
                 System.out.println("Error: Invalid input. Please enter a card\n"
                         + "that can be found in a standard deck of 52 cards, typed in\n"
                         + "lowercase.\n");
+                i--;
+                continue;
             }
             switch (card[i]) {
                 case "ace":
@@ -203,7 +205,7 @@ public class cards {
             }
         }
         
-        System.out.println("In this case, the total amount of points you have in\n"
+        System.out.println("\nIn this case, the total amount of points you have in\n"
                 + "your hand based off of what you input is " + handTotal + " points.\n"
                 + " At this point you canchoose to \"stay\", or keep the cards\n"
                 + "you have, or you can choose to \"hit\", or take an additional\n"
