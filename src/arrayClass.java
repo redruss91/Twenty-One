@@ -18,12 +18,12 @@ public class arrayClass {
      *
      * @param num
      */
-    public static void Bubbler( int [ ] num )
-{   int size = 6;
-    
-     int j;
-     boolean flag = true;   // set flag to true to begin first pass
-     int temp;   //holding variable
+    public static void Bubbler( int [ ] num ){
+       
+        int size = 6;
+        int j;
+        boolean flag = true;   // set flag to true to begin first pass
+        int temp;   //holding variable
 
      while ( flag )
      {
