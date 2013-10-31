@@ -207,7 +207,7 @@ public class cards {
         
         System.out.println("\nIn this case, the total amount of points you have in\n"
                 + "your hand based off of what you input is " + handTotal + " points.\n"
-                + " At this point you canchoose to \"stay\", or keep the cards\n"
+                + " At this point you can choose to \"stay\", or keep the cards\n"
                 + "you have, or you can choose to \"hit\", or take an additional\n"
                 + "card. Would you like to repeat this description? Type \"Y\" for yes,\n"
                 + "or \"N\" for no.\n");

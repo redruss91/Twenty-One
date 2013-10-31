@@ -10,11 +10,10 @@
 public class arrayClass{
     //built by Riley Brown
 
-    public static void main(String args[]){
+        int num[] = {1, 5, 4, 6, 3, 5};
     
-    
-    int num[] = {1, 5, 4, 6, 3, 5};
-        int size = 6;
+    public void sort(String args[]){
+   
         int place;
         boolean swap = true; 
         int temp;   
@@ -34,10 +33,15 @@ public class arrayClass{
                   }
             }
       }
-     System.out.println("\nYour sorted array:\n");
-     for(int i = 0; i < size; i++){
-     System.out.println(" " + num[i]);}
+     
 } 
+    
+    public void display(){
+        
+        System.out.println("\nYour sorted array:\n");
+     for(int i = 0; i < num.length; i++){
+     System.out.println(" " + num[i]);}
+    }
     
 }
 
