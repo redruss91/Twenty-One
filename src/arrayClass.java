@@ -20,25 +20,26 @@ public class arrayClass{
       
     int num[] = {1, 5, 4, 6, 3, 5};
         int size = 6;
-        int j;
-        boolean flag = true;   // set flag to true to begin first pass
-        int temp;   //holding variable
+        int place;
+        boolean swap = true; 
+        int temp;   
         
 
-     while ( flag )
+     while ( swap )
      {
-            flag= false;    //set flag to false awaiting a possible swap
-            for( j=0;  j < num.length -1;  j++ )
+        swap= false;   
+            for( place=0;  place < num.length -1;  place++ )
             {
-                   if ( num[ j ] < num[j+1] )   // change to > for ascending sort
+                   if ( num[ place ] < num[place+1] ) 
                    {
-                           temp = num[ j ];                //swap elements
-                           num[ j ] = num[ j+1 ];
-                           num[ j+1 ] = temp;
-                          flag = true;              //shows a swap occurred 
+                           temp = num[ place ];            
+                           num[ place ] = num[ place+1 ];
+                           num[ place+1 ] = temp;
+                          swap = true;    
                   }
             }
       }
+     System.out.println("\nYour sorted array:\n");
      for(int i = 0; i < size; i++){
      System.out.println(" " + num[i]);}
 } 
