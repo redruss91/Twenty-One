@@ -49,7 +49,8 @@ public class Twentyone {
         //comparison compare = new comparison();
         //compare.playercomp();
         
-        
+        //arrayClass sort = new arrayClass
+        //sort.sort();
     }
 
 public void getName() {

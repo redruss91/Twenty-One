@@ -32,7 +32,8 @@ public class arrayClass{
                   }
             }
       }
-     
+     arrayClass results = new arrayClass();
+     results.display();
 } 
     
     public void display(){
