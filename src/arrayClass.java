@@ -9,26 +9,38 @@
  */
 public class arrayClass {
     
-    int[] ourArray = new int[6];
-    int i = 0;
+
+    int num[] = {1, 5, 4, 6, 3, 5};
+ 
     
     
-    public void sorter(){
+    /**
+     *
+     * @param num
+     */
+    public static void Bubbler( int [ ] num )
+{   int size = 6;
     
-    ourArray[0] = 35351;
-    ourArray[1] = 3;
-    ourArray[2] = 64;
-    ourArray[3] = 745;
-    ourArray[4] = 75;
-    ourArray[5] = 751;
-    
-        for(i = 0; i < ourArray.length; i++){
-        System.out.println(ourArray[i]);
-        }
-    
-    
-    
-    
-    }
+     int j;
+     boolean flag = true;   // set flag to true to begin first pass
+     int temp;   //holding variable
+
+     while ( flag )
+     {
+            flag= false;    //set flag to false awaiting a possible swap
+            for( j=0;  j < num.length -1;  j++ )
+            {
+                   if ( num[ j ] < num[j+1] )   // change to > for ascending sort
+                   {
+                           temp = num[ j ];                //swap elements
+                           num[ j ] = num[ j+1 ];
+                           num[ j+1 ] = temp;
+                          flag = true;              //shows a swap occurred 
+                  }
+            }
+      }
+     for(int i = 0; i < size; i++){
+     System.out.println(" " + num[i]);}
+} 
     
 }
