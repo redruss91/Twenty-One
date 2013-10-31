@@ -7,23 +7,23 @@
  *
  * @author Riley
  */
-public class arrayClass {
+public class arrayClass{
     
 
-    int num[] = {1, 5, 4, 6, 3, 5};
- 
-    
+    public static void main(String args[]){
     
     /**
      *
      * @param num
      */
-    public static void Bubbler( int [ ] num ){
-       
+    
+      
+    int num[] = {1, 5, 4, 6, 3, 5};
         int size = 6;
         int j;
         boolean flag = true;   // set flag to true to begin first pass
         int temp;   //holding variable
+        
 
      while ( flag )
      {
@@ -44,3 +44,4 @@ public class arrayClass {
 } 
     
 }
+
