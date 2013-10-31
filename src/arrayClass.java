@@ -8,7 +8,7 @@
  * @author Riley
  */
 public class arrayClass{
-    
+    //built by Riley Brown
 
     public static void main(String args[]){
     
