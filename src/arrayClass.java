@@ -24,12 +24,11 @@ public class arrayClass{
         swap= false;   
             for( place=0;  place < num.length -1;  place++ )
             {
-                   if ( num[ place ] < num[place+1] ) 
-                   {
-                           temp = num[ place ];            
-                           num[ place ] = num[ place+1 ];
-                           num[ place+1 ] = temp;
-                          swap = true;    
+                   if ( num[ place ] < num[place+1] ){
+                    temp = num[ place ];            
+                    num[ place ] = num[ place+1 ];
+                    num[ place+1 ] = temp;
+                    swap = true;    
                   }
             }
       }
