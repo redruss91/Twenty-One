@@ -12,12 +12,7 @@ public class arrayClass{
 
     public static void main(String args[]){
     
-    /**
-     *
-     * @param num
-     */
     
-      
     int num[] = {1, 5, 4, 6, 3, 5};
         int size = 6;
         int place;
