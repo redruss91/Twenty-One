@@ -13,6 +13,7 @@ import java.util.Scanner;
 public class Orders {
      
      comparison comptodo = new comparison();
+      report reporter = new report();
      HelpMenuView forhelp = new HelpMenuView();
      HelpMenuControl exhelp = new HelpMenuControl();
      int i = 0;
@@ -28,7 +29,8 @@ public class Orders {
      @SuppressWarnings("empty-statement")
      
    public void init(){
-       report reporter = new report();
+      
+       
        Scanner input = new Scanner(System.in);
        String other;
       
@@ -42,9 +44,8 @@ public class Orders {
     
       
     if("hit".equals(this.menu)){
-    comparison fin = new comparison();
-    fin.playeroneHit= fin.punt;
-    
+    //for hit
+    comptodo.playeroneHit = comptodo.punt;
     reporter.hitter();
     reporter.displayhandone();
     System.out.println("You now have in your hand a " + comptodo.playeroneOne + " and a " + comptodo.playeroneTwo + " and a " + comptodo.playeroneHit);
@@ -62,10 +63,11 @@ public class Orders {
     else if("stay".equals(this.menu)){
       //comptodo.playeroneHit
         //stay ends game for player comptodo.
-        if((comptodo.playeroneOne + comptodo.playeroneTwo + comptodo.playeroneHit) < 21) { reporter.bustin(); this.i=2;}
-                 
-        else{System.out.println("Bust!"); this.i=2; reporter.bustin();}//put here, the same IF as above. 
-      }
+        if((comptodo.playeroneOne + comptodo.playeroneTwo + comptodo.playeroneHit) < 21) 
+            { reporter.bustin(); this.i=2;}
+        else
+            {System.out.println("Bust!"); this.i=2; reporter.bustin();}
+            }
     
     else{System.out.println("Error");}
                     }

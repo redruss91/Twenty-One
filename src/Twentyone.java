@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class Twentyone {
 
-    String name;
+    static String name = "";
     String instructions = 
           
             "\n**____________________________________________**\n"
@@ -48,20 +48,18 @@ public class Twentyone {
         //something different to give final output...
         //comparison compare = new comparison();
         //compare.playercomp();
-        
-        //arrayClass sort = new arrayClass
-        //sort.sort();
+     
     }
 
 public void getName() {
 Scanner input = new Scanner(System.in);
 System.out.println("Player 1, enter your name: ");
-this.name = input.next();
+Twentyone.name = input.next();
 }
 
 
 public void displayHelp(){
-System.out.println("\n\t      Welcome " + this.name + " to 21!!\n");
+System.out.println("\n\t      Welcome " + Twentyone.name + " to 21!!\n");
 System.out.println(this.instructions);
 
 }
