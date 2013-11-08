@@ -11,16 +11,13 @@
  * @author Riley
  */
 public class cardvalue {
-         
-    public int playeroneOne =  (int) (Math.random()*11);
-    public int playeroneTwo =  (int) (Math.random()*11);//represent the two cards in player One's hand.
-   
+  
      
   
     
 public int firsthand() {
+    return 0;
 
-        return (this.playeroneOne + this.playeroneTwo);
 }}
 
 

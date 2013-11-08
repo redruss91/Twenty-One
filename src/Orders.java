@@ -13,12 +13,12 @@ import java.util.Scanner;
 public class Orders {
      
      comparison comptodo = new comparison();
-      report reporter = new report();
+     report reporter = new report();
      HelpMenuView forhelp = new HelpMenuView();
      HelpMenuControl exhelp = new HelpMenuControl();
      int i = 0;
      String menu;
-    String lineup = "\n=============================="
+     String lineup = "\n=============================="
                + "\nWhat do you want to do?"
                + "\n- hit - Gives you another card."
                + "\n- stay - Keep your cards."

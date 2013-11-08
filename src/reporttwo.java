@@ -18,11 +18,11 @@ public class reporttwo {
      * @param name
      */
     public void findtwoOne() {
-    boolean fore = false;
+    boolean dat = false;
     comparison flint = new comparison();
     
     
-       while (fore != true ){
+       while (dat != true ){
            
     if(one.playertwoOne + one.playertwoTwo > 21 && one.playertwoOne == 11)
     {flint.playertwoOne = 1; System.out.println(Twentyone.name + ", you have in your hand an ace");}
@@ -42,7 +42,7 @@ public class reporttwo {
 
     else {System.out.println("error");}
     
-        fore = true;
+        dat = true;
      }
     }
 
@@ -50,8 +50,8 @@ public class reporttwo {
 
 public void findtwoTwo() {
     comparison fire = new comparison();
-    boolean fore = false;
-     while (fore != true ){
+    boolean taf = false;
+     while (taf != true ){
                 
     if(one.playertwoOne + one.playertwoTwo > 21 && one.playertwoTwo == 11)
     {fire.playertwoTwo = 1; System.out.println("and an ace.");}
@@ -69,14 +69,14 @@ public void findtwoTwo() {
     {System.out.println("and a face card.");}
 
     else {System.out.println("error");}
-     fore = true;
+     taf = true;
      }
     }
 
 
 public void hitter() {
-  boolean fore = false;
-     while (fore != true ){
+  boolean fat = false;
+     while (fat != true ){
     if(one.playertwoOne + one.playertwoTwo + one.playertwoHit > 21 && one.playertwoHit == 11)
     {one.playertwoTwo = 1; System.out.println("\nYou receive ace.\n");}
     
@@ -94,7 +94,7 @@ public void hitter() {
 
     else {System.out.println("**Error**\n");}
     
-    fore = true;
+    fat = true;
     }
 }
 
