@@ -31,11 +31,9 @@ public class Orders {
      
    public void init(){
       
-       
        Scanner input = new Scanner(System.in);
        String other;
-      
-               
+                 
        
         System.out.println("\n");
         
@@ -46,20 +44,49 @@ public class Orders {
       
     if("hit".equals(this.menu)){
     //for hit
-    comptodo.playeroneHit = comptodo.punt;
+       
     reporter.hitter();
-    reporter.displayhandone();
-    System.out.println(chicken + comptodo.playeroneHit);
+    reporter.find();
+    reporter.findtwo();
+    if(comptodo.playeroneHit == 11 || comptodo.playeroneHit == 1){
+    System.out.println("and an ace.");}
+     else if(comptodo.playeroneHit >= 2 && comptodo.playeroneHit <= 10)
+    {System.out.println("and a " + comptodo.playeroneTwo);} // + " of " + comptodo.suitt + ".");}
+    else if (comptodo.playeroneHit == 11)
+    {System.out.println("and a jack.");}
+    
+    else if (comptodo.playeroneHit == 12)
+    {System.out.println("and a queen.");}
+    
+    else if (comptodo.playeroneHit == 13)
+    {System.out.println("and a king.");}
+
+    else {System.out.println("**Error**");}
+    
+    System.out.println();
+    
+        if (comptodo.playeroneHit + comptodo.playeroneOne + comptodo.playeroneTwo > 21)
+            { this.i=2; System.out.println("BUST!");} //trying to end the game
+    
+        else if (comptodo.playeroneOne + comptodo.playeroneTwo + comptodo.playeroneHit == 21)
+            {System.out.println("21!\n"); reporter.bustin();}
+
+        else{reporter.bustin();}
+        
+                
+        
     }    
     
     else if ("help".equals(this.menu)){
     //start help sequence
         exhelp.helptwo();   
     }
+    
     else if ("quit".equals(this.menu) || "end".equals(this.menu) || "exit".equals(this.menu)){
     System.out.println("\nThank you for playing.");
         i=2; 
-    }   
+    }
+    
     else if("stay".equals(this.menu)){
       //comptodo.playeroneHit
         //stay ends game for player comptodo.
@@ -69,7 +96,7 @@ public class Orders {
             {System.out.println("Bust!"); this.i=2; reporter.bustin();}
             }
     
-    else{System.out.println("Error");}
+    else{System.out.println("Error -- Please enter a valid input.");}
                     }
    
    

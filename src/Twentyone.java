@@ -11,8 +11,15 @@ import java.util.Scanner;
  * @author rtbro_000
  */
 public class Twentyone {
-
+    String choice;
     static String name = "";
+      String telltell = "=============================\n"
+            + "\tMAIN MENU\n\n"
+            + " Type:\n"
+            + "start - To begin the game.\n"
+            + "help - For the help menu.\n"
+            + "quit - To end the game.\n"
+            + "=============================\n";
     String instructions = 
           
             "\n**____________________________________________**\n"
@@ -25,8 +32,12 @@ public class Twentyone {
      Twentyone myGame = new Twentyone();
         myGame.getName();
         myGame.displayHelp();
+        Twentyone.pauseProgram();
+        myGame.intromenu();
         Twentyone.pauseProg();
         
+      comparison comp = new comparison();
+      comp.suit();
      //Just so I knew that they would work.
      //HelpMenuControl help = new HelpMenuControl();
      //help.helptwo();     
@@ -45,13 +56,33 @@ public class Twentyone {
      Orders begin = new Orders();
         begin.init();
        
-        //something different to give final output...
-        //comparison compare = new comparison();
-        //compare.playercomp();
-     
+      
     }
+public void intromenu(){
+    HelpMenuControl exhelp = new HelpMenuControl();
+    for(int i =0; i < 1; ){   
+    Scanner input = new Scanner(System.in);
+    System.out.println(telltell);
+    this.choice = input.next();
+
+        if("start".equals(this.choice)){i = 1; 
+                    }                
+        else if("help".equals(this.choice)){
+               exhelp.helptwo();
+            }
+        else if("quit".equals(this.choice)){
+                System.out.println("\nThank you for playing.");
+                System.exit(0);
+                }
+        else{ System.out.println("\n**Error: Please enter a valid option**\n\n");}
+        }
+
+}   
+    
+
 
 public void getName() {
+    
 Scanner input = new Scanner(System.in);
 System.out.println("Player 1, enter your name: ");
 Twentyone.name = input.next();
