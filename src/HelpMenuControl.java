@@ -28,18 +28,23 @@ public class HelpMenuControl {
         this.decide = input.next();
         
         System.out.println("\n");
-        
-        if ("rules".equals(this.decide)){
-            forhelp.rules();
-            count++;
-        } else if ("goal".equals(this.decide)){
-            forhelp.goal();
-            count++;
-        } else if ("description".equals(this.decide)){
-            forhelp.description();
-            count++;
-        } else 
-            forhelp.error();
+             switch (this.decide) {
+                 case "rules":
+                     forhelp.rules();
+                     count++;
+                     break;
+                 case "goal":
+                     forhelp.goal();
+                     count++;
+                     break;
+                 case "description":
+                     forhelp.description();
+                     count++;
+                     break;
+                 default:
+                     forhelp.error();
+                     break;
+             }
          }
         
         forhelp.goback();

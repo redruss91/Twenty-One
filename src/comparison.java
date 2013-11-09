@@ -17,9 +17,9 @@ public class comparison {
     int playeroneHit;
     int playertwoOne = 9;
     int playertwoTwo = 9;  
-    int playertwoHit = cards.nextInt(13) + 1;
+    int playertwoHit = cards.nextInt(11) + 1;
     
-    int punt = cards.nextInt(13) + 1;
+    int punt = cards.nextInt(11) + 1;
     double val = (double)playeroneOne;
 }
   

@@ -17,6 +17,7 @@ public class Orders {
      HelpMenuView forhelp = new HelpMenuView();
      HelpMenuControl exhelp = new HelpMenuControl();
      int i = 0;
+     String chicken = "You now have in your hand a " + comptodo.playeroneOne + " and a " + comptodo.playeroneTwo + " and a ";
      String menu;
      String lineup = "\n=============================="
                + "\nWhat do you want to do?"
@@ -48,8 +49,7 @@ public class Orders {
     comptodo.playeroneHit = comptodo.punt;
     reporter.hitter();
     reporter.displayhandone();
-    System.out.println("You now have in your hand a " + comptodo.playeroneOne + " and a " + comptodo.playeroneTwo + " and a " + comptodo.playeroneHit);
-    
+    System.out.println(chicken + comptodo.playeroneHit);
     }    
     
     else if ("help".equals(this.menu)){

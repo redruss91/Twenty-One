@@ -104,7 +104,7 @@ public void displayhandone(){
     Orders noob = new Orders();
     
     if (one.playeroneHit + one.playeroneOne + one.playeroneTwo > 21)
-    { noob.i=2; System.out.println("BUST!"); noob.i = 2;} //trying to end the game
+    { noob.i=2; System.out.println("BUST!");} //trying to end the game
     
     else if (one.playeroneOne + one.playeroneTwo + one.playeroneHit == 21)
     {System.out.println("21!\n");}
