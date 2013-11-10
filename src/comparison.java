@@ -26,9 +26,9 @@ public class comparison {
         {12, 12, 12, 12},
         {13, 13, 13, 13},
                          };
-    int playeroneOne = myarray[1][1]; //creating random number for every time they are called. 
+    int playeroneOne = myarray[3][1]; //creating random number for every time they are called. 
     int playeroneTwo = myarray[8][3];
-    int playeroneHit = myarray[11][0];
+    int playeroneHit = myarray[2][0];
     int playertwoOne = 9;
     int playertwoTwo = 1;  
     int playertwoHit = 6;

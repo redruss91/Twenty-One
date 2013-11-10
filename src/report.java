@@ -121,12 +121,14 @@ public void bustin() {
                 if ((one.playertwoOne + one.playertwoTwo + one.playertwoHit) == (one.playeroneOne + one.playeroneTwo + one.playeroneHit))
                     {System.out.println("\nTIE!!!");}   
                 
-                else if((one.playeroneOne + one.playeroneTwo + one.playeroneHit) > (one.playertwoOne + one.playertwoTwo + one.playertwoHit) 
-                        || (one.playertwoOne + one.playertwoTwo + one.playertwoHit) > 21  && (one.playeroneOne + one.playeroneTwo + one.playeroneHit) <= 21)                    
+                else if((one.playeroneOne + one.playeroneTwo + one.playeroneHit) > (one.playertwoOne + one.playertwoTwo + one.playertwoHit)
+                        && (one.playeroneOne + one.playeroneTwo + one.playeroneHit) <= 21
+                        || (one.playertwoOne + one.playertwoTwo + one.playertwoHit) > 21  )                    
                      {System.out.println("\nP1 WINS!!! With " + (one.playeroneOne + one.playeroneHit + one.playeroneTwo)+" points!");}    
                 
-                else if(((one.playeroneOne + one.playeroneTwo + one.playeroneHit) < (one.playertwoOne + one.playertwoTwo + one.playertwoHit))
-                       || (one.playeroneOne + one.playeroneTwo + one.playeroneHit) > 21 && (one.playertwoOne + one.playertwoTwo + one.playertwoHit) <= 21)                    
+                else if((one.playeroneOne + one.playeroneTwo + one.playeroneHit) < (one.playertwoOne + one.playertwoTwo + one.playertwoHit)
+                        && (one.playertwoOne + one.playertwoTwo + one.playertwoHit) <= 21
+                       || (one.playeroneOne + one.playeroneTwo + one.playeroneHit) > 21)                    
                     {System.out.println("\nP2 WINS!!! With " + (one.playertwoOne + one.playertwoHit + one.playertwoTwo) + " points!");}  
                 
                 else {System.out.println("\n**Error**");}

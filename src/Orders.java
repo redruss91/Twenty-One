@@ -66,7 +66,7 @@ public class Orders {
     System.out.println();
     
         if (comptodo.playeroneHit + comptodo.playeroneOne + comptodo.playeroneTwo > 21)
-            { this.i=2; System.out.println("BUST!");} //trying to end the game
+            { this.i=2; System.out.println("BUST!"); reporter.bustin();} //trying to end the game
     
         else if (comptodo.playeroneOne + comptodo.playeroneTwo + comptodo.playeroneHit == 21)
             {System.out.println("21!\n"); reporter.bustin();}
