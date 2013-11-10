@@ -39,10 +39,10 @@ public class comparison {
     
     public void suit(){
     for(i=0; i <= 12; i++){
-        if(this.myarray[i][0] == this.playeroneOne){ this.suit = "spades";}
-        else if(this.myarray[i][1] == this.playeroneOne){ this.suit = "hearts";}
-        else if(this.myarray[i][2] == this.playeroneOne){ this.suit = "clubs";}
-        else if(this.myarray[i][3] == this.playeroneOne){ this.suit = "diamonds";}
+        if(this.playeroneOne == this.myarray[i][0]){ this.suit = "spades";}
+        else if( this.playeroneOne == this.myarray[i][1]){ this.suit = "hearts";}
+        else if(this.playeroneOne == this.myarray[i][2]){ this.suit = "clubs";}
+        else if( this.playeroneOne == this.myarray[i][3]){ this.suit = "diamonds";}
     }
     for(i=0; i <= 12; i++){
         if(this.myarray[i][0] == this.playeroneTwo){ this.suitt = "spades";}
@@ -51,7 +51,7 @@ public class comparison {
         else if(this.myarray[i][3] == this.playeroneTwo){ this.suitt = "diamonds";}
         
         
-        
+    
         
         
         
