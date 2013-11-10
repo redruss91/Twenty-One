@@ -17,6 +17,7 @@ public class Orders {
      HelpMenuView forhelp = new HelpMenuView();
      HelpMenuControl exhelp = new HelpMenuControl();
      int i = 0;
+     boolean s = true;
      String chicken = "You now have in your hand a " + comptodo.playeroneOne + " and a " + comptodo.playeroneTwo + " and a ";
      String menu;
      String lineup = "\n=============================="
@@ -44,14 +45,15 @@ public class Orders {
       
     if("hit".equals(this.menu)){
     //for hit
-       
+    
+        
     reporter.hitter();
     reporter.find();
     reporter.findtwo();
     if(comptodo.playeroneHit == 11 || comptodo.playeroneHit == 1){
     System.out.println("and an ace.");}
      else if(comptodo.playeroneHit >= 2 && comptodo.playeroneHit <= 10)
-    {System.out.println("and a " + comptodo.playeroneTwo);} // + " of " + comptodo.suitt + ".");}
+    {System.out.println("and a " + comptodo.playeroneHit);} // + " of " + comptodo.suitt + ".");}
     else if (comptodo.playeroneHit == 11)
     {System.out.println("and a jack.");}
     
@@ -66,14 +68,13 @@ public class Orders {
     System.out.println();
     
         if (comptodo.playeroneHit + comptodo.playeroneOne + comptodo.playeroneTwo > 21)
-            { this.i=2; System.out.println("BUST!"); reporter.bustin();} //trying to end the game
+            { this.i=2; System.out.println("BUST!"); reporter.bustin(); this.s= false;} //trying to end the game
     
         else if (comptodo.playeroneOne + comptodo.playeroneTwo + comptodo.playeroneHit == 21)
-            {System.out.println("21!\n"); reporter.bustin();}
+            {System.out.println("21!\n"); reporter.bustin(); this.s= false;}
 
-        else{reporter.bustin();}
         
-                
+    
         
     }    
     
