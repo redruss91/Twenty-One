@@ -27,14 +27,7 @@ public class Deck {
                          };
      
     //creating random number for every time they are called. 
-    int playeroneOne = myarray[3][1]; 
-    int playeroneTwo = myarray[8][3];
-  
-    
-    int playertwoOne = 9;
-    int playertwoTwo = 1;  
-    int playertwoHit = 2;
-    int i = 0;
+   
     
     
     
@@ -51,7 +44,7 @@ public class Deck {
     
     public String suit2(){
  
-        return "spades.";
+        return "spades";
         
     }
     

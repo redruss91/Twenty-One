@@ -9,7 +9,7 @@
  */
 public class reporttwo {
     
-    Deck one = new Deck();
+    Playeronehand one = new Playeronehand();
     boolean fore;
    //Will also be used later to display cards. 
     
@@ -19,13 +19,13 @@ public class reporttwo {
      */
     public void findtwoOne() {
     boolean dat = false;
-    Deck flint = new Deck();
+    //Deck one = new Deck();
     
     
        while (dat != true ){
            
     if(one.playertwoOne + one.playertwoTwo > 21 && one.playertwoOne == 11)
-    {flint.playertwoOne = 1; System.out.println(Twentyone.name + ", you have in your hand an ace");}
+    {one.playertwoOne = 1; System.out.println(Twentyone.name + ", you have in your hand an ace");}
         
     else if(one.playertwoOne == 11)
     //name won't show up...?
@@ -49,12 +49,12 @@ public class reporttwo {
 
 
 public void findtwoTwo() {
-    Deck fire = new Deck();
+   
     boolean taf = false;
      while (taf != true ){
                 
     if(one.playertwoOne + one.playertwoTwo > 21 && one.playertwoTwo == 11)
-    {fire.playertwoTwo = 1; System.out.println("and an ace.");}
+    {one.playertwoTwo = 1; System.out.println("and an ace.");}
     
     else if(one.playertwoTwo == 11 )
     {System.out.println("and an ace.");}
@@ -99,13 +99,13 @@ public void hitter() {
 }
 
 public void displayhandone(){
-    Deck too = new Deck();
+    //Deck one = new Deck();
     Orders noob = new Orders();
     
     if (one.playertwoHit + one.playertwoOne + one.playertwoTwo > 21)
     { noob.i=2; System.out.println("BUST!");  noob.i = 2;} //trying to end the game
     
-    else if (too.playertwoOne + too.playertwoTwo + noob.playeroneHit == 21)
+    else if (one.playertwoOne + one.playertwoTwo + Orders.playeroneHit == 21)
     {System.out.println("21!\n");}
 
     
@@ -113,18 +113,18 @@ public void displayhandone(){
 
 
 public void bustin() {
-            Deck comptodo = new Deck();
+            //Deck one = new Deck();
              Orders noob = new Orders();
            
-                if ((comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit) == (one.playeroneOne + one.playeroneTwo + noob.playeroneHit))
+                if ((one.playertwoOne + one.playertwoTwo + one.playertwoHit) == (one.playeroneOne + one.playeroneTwo + Orders.playeroneHit))
                     {System.out.println("\nTIE!!!");}   
                 
-                else if(((one.playeroneOne + one.playeroneTwo + noob.playeroneHit) > (comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit)) 
-                        || (comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit) > 21  && (one.playeroneOne + one.playeroneTwo + noob.playeroneHit) <= 21)                    
-                     {System.out.println("\nP1 WINS!!! With " + (one.playeroneOne + noob.playeroneHit + one.playeroneTwo)+" points!");}    
+                else if(((one.playeroneOne + one.playeroneTwo + Orders.playeroneHit) > (one.playertwoOne + one.playertwoTwo + one.playertwoHit)) 
+                        || (one.playertwoOne + one.playertwoTwo + one.playertwoHit) > 21  && (one.playeroneOne + one.playeroneTwo + Orders.playeroneHit) <= 21)                    
+                     {System.out.println("\nP1 WINS!!! With " + (one.playeroneOne + Orders.playeroneHit + one.playeroneTwo)+" points!");}    
                 
-                else if(((one.playeroneOne + one.playeroneTwo + noob.playeroneHit) < (comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit))
-                       || (one.playeroneOne + one.playeroneTwo + noob.playeroneHit) > 21 && (comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit) <= 21)                    
+                else if(((one.playeroneOne + one.playeroneTwo + Orders.playeroneHit) < (one.playertwoOne + one.playertwoTwo + one.playertwoHit))
+                       || (one.playeroneOne + one.playeroneTwo + Orders.playeroneHit) > 21 && (one.playertwoOne + one.playertwoTwo + one.playertwoHit) <= 21)                    
                     {System.out.println("\nP2 WINS!!!");}  
                 
                 else {System.out.println("\n**Error**");}

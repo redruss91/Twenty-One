@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class Orders {
      
-     int playeroneHit = 0;
+     static int playeroneHit = 0;
      Playeronehand reporter = new Playeronehand();
      HelpMenuView forhelp = new HelpMenuView();
      HelpMenuControl exhelp = new HelpMenuControl();
@@ -21,7 +21,7 @@ public class Orders {
      
      int i = 0;
      boolean s = true;
-     String chicken = "You now have in your hand a " + deck.playeroneOne + " and a " + deck.playeroneTwo + " and a ";
+     String chicken = "You now have in your hand a " + reporter.playeroneOne + " and a " + reporter.playeroneTwo + " and a ";
      String menu;
      String lineup = "\n=============================="
                + "\nWhat do you want to do?"
@@ -53,52 +53,58 @@ public class Orders {
                case "hit":
                    //for hit
                    
-                   //value not staying assigned...
                    playeroneHit = deck.myarray[11][0];
                   
                    while (fore != true ){
          
-                    if(deck.playeroneOne + deck.playeroneTwo + playeroneHit > 21 && playeroneHit == 11)
-                         {playeroneHit = 1; System.out.println(onehand.handhold + "\nYou receive an ace.\n");}
+                     if(reporter.playeroneOne + reporter.playeroneTwo > 21 && playeroneHit == 11)
+                        {reporter.playeroneTwo = 1; System.out.println("you recieve an ace");}
     
                     else if(playeroneHit == 11 )
-                        {System.out.println(onehand.handhold + "\nYou recieve an ace.\n");}
+                        {System.out.println("\nYou recieve an ace");}
     
-                    else if(playeroneHit == 1 && deck.playeroneOne + deck.playeroneTwo + playeroneHit <= 21)
-                        {System.out.println(onehand.handhold + "\nYou receive an ace.\n"); playeroneHit = 11;}
+                    else if(playeroneHit == 1 && reporter.playeroneOne + reporter.playeroneTwo + playeroneHit <= 21)
+                        {System.out.println("\nYou recieve an ace"); reporter.playeroneTwo = 11;}
     
-                    else if(playeroneHit >= 2 && playeroneHit < 10)
-                        {System.out.println(onehand.handhold + "\nYou recieve a " + playeroneHit +"\n");}
+                    else if(playeroneHit >= 2 && playeroneHit <= 10)
+                        {System.out.println("\nYou receive a " + playeroneHit);}
 
-                    else if (playeroneHit == 10)
-                        {System.out.println(onehand.handhold + "\nYou receive a face card.\n");}
+                    else if (playeroneHit == 11)
+                        {System.out.println("\nYou recieve a jack");}
+    
+                    else if (playeroneHit == 12)
+                         {System.out.println("\nYou recieve a queen");}
+    
+                    else if (playeroneHit == 13)
+                         {System.out.println("\nYou recieve a king");}
 
-                    else {System.out.println("**Error**\n");}
+                    else {System.out.println("**Error**");}
     
                         fore = true;
                     }
-                   reporter.find();
-                   reporter.findtwo();
-                   if(this.playeroneHit == 11 || this.playeroneHit == 1){
-                   System.out.println(onehand.handhold += "and an ace.");}
-                    else if(this.playeroneHit >= 2 && this.playeroneHit <= 10)
-                   {System.out.println(onehand.handhold += "and a " + this.playeroneHit);}
-                   else if (this.playeroneHit == 11)
-                   {System.out.println(onehand.handhold += "and a jack.");}
+                   Twentyone.pauseProgram();
+                  onehand.find();
+                  onehand.findtwo();
+                   if(Orders.playeroneHit == 11 || Orders.playeroneHit == 1){
+                   System.out.println(" and an ace.");}
+                    else if(Orders.playeroneHit >= 2 && Orders.playeroneHit <= 10)
+                   {System.out.println(" and a " + Orders.playeroneHit);}
+                   else if (Orders.playeroneHit == 11)
+                   {System.out.println(" and a jack.");}
                    
-                   else if (this.playeroneHit == 12)
-                   {System.out.println(onehand.handhold += "and a queen.");}
+                   else if (Orders.playeroneHit == 12)
+                   {System.out.println(" and a queen.");}
                    
-                   else if (this.playeroneHit == 13)
-                   {System.out.println(onehand.handhold += "and a king.");}
+                   else if (Orders.playeroneHit == 13)
+                   {System.out.println(" and a king.");}
 
                    else {System.out.println("**Error**");}
+                  
+                   if (Orders.playeroneHit + reporter.playeroneOne + reporter.playeroneTwo > 21)
+                       { this.i=2; System.out.println("\nBUST!"); bustin(); this.s= false;} //trying to end the game
                
-                   if (this.playeroneHit + deck.playeroneOne + deck.playeroneTwo > 21)
-                       { this.i=2; System.out.println("BUST!"); reporter.bustin(); this.s= false;} //trying to end the game
-               
-                   else if (deck.playeroneOne + deck.playeroneTwo + this.playeroneHit == 21)
-                       {System.out.println("21!\n"); reporter.bustin(); this.s= false;}
+                   else if (reporter.playeroneOne + reporter.playeroneTwo + Orders.playeroneHit == 21)
+                       {System.out.println("21!\n"); bustin(); this.s= false;}
                    break;
                    
                    
@@ -115,11 +121,11 @@ public class Orders {
                    break;
                case "stay":
                    //this.playeroneHit
-                   //stay ends game for player deck.
-                   if((deck.playeroneOne + deck.playeroneTwo + this.playeroneHit) < 21) 
-                       { reporter.bustin(); this.i=2;}
+                   //stay ends game for player reporter.
+                   if((reporter.playeroneOne + reporter.playeroneTwo + Orders.playeroneHit) < 21) 
+                       { bustin(); this.i=2;}
                    else
-                       {System.out.println("Bust!"); this.i=2; reporter.bustin();}
+                       {System.out.println("Bust!"); this.i=2; bustin();}
                    break;
                default:
                    System.out.println("Error -- Please enter a valid input.");
@@ -132,6 +138,42 @@ public class Orders {
    
    
    }
+     
+     public void bustin() {
+            
+            if ((reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit) == (reporter.playeroneOne + reporter.playeroneTwo + Orders.playeroneHit))
+                    {System.out.println("\nTIE!!!");}   
+            else if ((reporter.playeroneOne + reporter.playeroneTwo + Orders.playeroneHit) <= 21){
+                
+                if ((reporter.playeroneOne + reporter.playeroneTwo + Orders.playeroneHit) == 21)
+                {System.out.println("\nP1 WINS!!! With " + (reporter.playeroneOne + Orders.playeroneHit + reporter.playeroneTwo)+" points!");}
+                
+                else if ((reporter.playeroneOne + reporter.playeroneTwo + Orders.playeroneHit) > (reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit))
+                {System.out.println("\nP1 WINS!!! With " + (reporter.playeroneOne + Orders.playeroneHit + reporter.playeroneTwo)+" points!");}
+                
+                else if ((reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit) > 21 )
+                {System.out.println("\nP1 WINS!!! With " + (reporter.playeroneOne + Orders.playeroneHit + reporter.playeroneTwo)+" points!");}
+                 }
+            
+            else if ((reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit) < 21){
+                
+                if ((reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit) == 21)
+                {System.out.println("\nP2 WINS!!! With " + (reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit)+" points!");}
+                
+                else if ((reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit) > (reporter.playeroneOne + reporter.playeroneTwo + Orders.playeroneHit))
+                {System.out.println("\nP2 WINS!!! With " + (reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit)+" points!");}
+                
+                else if ((reporter.playeroneOne + reporter.playeroneTwo + Orders.playeroneHit) > 21 )
+                {System.out.println("\nP2 WINS!!! With " + (reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit)+" points!");}
+                }
+            
+            else {System.out.println("\n**Error**");}
+            
+            
+                             
+              }
+     
+     
 }
    
 
