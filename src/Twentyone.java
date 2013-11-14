@@ -36,14 +36,15 @@ public class Twentyone {
         myGame.intromenu();
         Twentyone.pauseProg();
         
-      comparison comp = new comparison();
-      comp.suit();
+      Deck comp = new Deck();
+      //comp.suit();
+      
      //Just so I knew that they would work.
      //HelpMenuControl help = new HelpMenuControl();
      //help.helptwo();     
      //HelpMenuView helpview = new HelpMenuView();
       
-     report tell = new report();
+     Playeronehand tell = new Playeronehand();
         tell.find();
         tell.findtwo();
                        

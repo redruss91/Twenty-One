@@ -9,7 +9,7 @@
  */
 public class reporttwo {
     
-    comparison one = new comparison();
+    Deck one = new Deck();
     boolean fore;
    //Will also be used later to display cards. 
     
@@ -19,7 +19,7 @@ public class reporttwo {
      */
     public void findtwoOne() {
     boolean dat = false;
-    comparison flint = new comparison();
+    Deck flint = new Deck();
     
     
        while (dat != true ){
@@ -49,7 +49,7 @@ public class reporttwo {
 
 
 public void findtwoTwo() {
-    comparison fire = new comparison();
+    Deck fire = new Deck();
     boolean taf = false;
      while (taf != true ){
                 
@@ -99,13 +99,13 @@ public void hitter() {
 }
 
 public void displayhandone(){
-    comparison too = new comparison();
+    Deck too = new Deck();
     Orders noob = new Orders();
     
     if (one.playertwoHit + one.playertwoOne + one.playertwoTwo > 21)
     { noob.i=2; System.out.println("BUST!");  noob.i = 2;} //trying to end the game
     
-    else if (too.playertwoOne + too.playertwoTwo + too.playeroneHit == 21)
+    else if (too.playertwoOne + too.playertwoTwo + noob.playeroneHit == 21)
     {System.out.println("21!\n");}
 
     
@@ -113,18 +113,18 @@ public void displayhandone(){
 
 
 public void bustin() {
-            comparison comptodo = new comparison();
-            
+            Deck comptodo = new Deck();
+             Orders noob = new Orders();
            
-                if ((comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit) == (one.playeroneOne + one.playeroneTwo + one.playeroneHit))
+                if ((comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit) == (one.playeroneOne + one.playeroneTwo + noob.playeroneHit))
                     {System.out.println("\nTIE!!!");}   
                 
-                else if(((one.playeroneOne + one.playeroneTwo + one.playeroneHit) > (comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit)) 
-                        || (comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit) > 21  && (one.playeroneOne + one.playeroneTwo + one.playeroneHit) <= 21)                    
-                     {System.out.println("\nP1 WINS!!! With " + (one.playeroneOne + one.playeroneHit + one.playeroneTwo)+" points!");}    
+                else if(((one.playeroneOne + one.playeroneTwo + noob.playeroneHit) > (comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit)) 
+                        || (comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit) > 21  && (one.playeroneOne + one.playeroneTwo + noob.playeroneHit) <= 21)                    
+                     {System.out.println("\nP1 WINS!!! With " + (one.playeroneOne + noob.playeroneHit + one.playeroneTwo)+" points!");}    
                 
-                else if(((one.playeroneOne + one.playeroneTwo + one.playeroneHit) < (comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit))
-                       || (one.playeroneOne + one.playeroneTwo + one.playeroneHit) > 21 && (comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit) <= 21)                    
+                else if(((one.playeroneOne + one.playeroneTwo + noob.playeroneHit) < (comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit))
+                       || (one.playeroneOne + one.playeroneTwo + noob.playeroneHit) > 21 && (comptodo.playertwoOne + comptodo.playertwoTwo + comptodo.playertwoHit) <= 21)                    
                     {System.out.println("\nP2 WINS!!!");}  
                 
                 else {System.out.println("\n**Error**");}
