@@ -92,20 +92,10 @@ public void findtwo() {
     else {System.out.println("**Error**");}
      fore = true;
      }
-    }
-
-
-public void hitter() {
-  
-  
-    
-}
+}}
 
 
 
-
-
-}
 
     
     

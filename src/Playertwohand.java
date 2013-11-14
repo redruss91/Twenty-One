@@ -7,7 +7,7 @@
  *
  * @author rtbro_000
  */
-public class reporttwo {
+public class Playertwohand {
     
     Playeronehand one = new Playeronehand();
     boolean fore;

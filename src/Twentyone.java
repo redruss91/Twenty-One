@@ -48,12 +48,7 @@ public class Twentyone {
      Playeronehand tell = new Playeronehand();
         tell.find();
         tell.findtwo();
-                       
-      //reporttwo telltwo = new reporttwo();
-        //telltwo.findtwoOne();
-        //telltwo.findtwoTwo();
-        //telltwo.displayhandtwo();
-        
+       
         Twentyone.pauseProgram();
      Orders begin = new Orders();
         begin.init();
