@@ -25,8 +25,6 @@ public class Deck {
         {12, 12, 12, 12},
         {13, 13, 13, 13},
                          };
-     
-    //creating random number for every time they are called. 
    
     
     

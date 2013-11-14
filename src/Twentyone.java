@@ -14,17 +14,18 @@ public class Twentyone {
     String choice;
     static String name = "";
       String telltell = "=============================\n"
-            + "\tMAIN MENU\n\n"
+            + "\tMAIN MENU\n"
+            + "=============================\n\n"
             + " Type:\n"
-            + "start - To begin the game.\n"
-            + "help - For the help menu.\n"
-            + "quit - To end the game.\n"
+            + "   start - To begin the game.\n"
+            + "   help - For the help menu.\n"
+            + "   quit - To end the game.\n"
             + "=============================\n";
     String instructions = 
           
             "\n**____________________________________________**\n"
-            + "Players have to try to get as close to 21\n"
-            + "as possible without going over.\n"
+            + "    Players have to try to get as close to 21\n"
+            + "        as possible without going over.\n"
             + "They can hit (recieve more cards) or stay (keep cards).\n"
             + "**************************************************\n";
     
@@ -85,7 +86,8 @@ public void intromenu(){
 public void getName() {
     
 Scanner input = new Scanner(System.in);
-System.out.println("Player 1, enter your name: ");
+System.out.println("*********************\n"
+        + "Player 1, enter your name: \n");
 Twentyone.name = input.next();
 }
 

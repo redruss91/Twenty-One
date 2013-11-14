@@ -24,11 +24,12 @@ public class Orders {
      String chicken = "You now have in your hand a " + reporter.playeroneOne + " and a " + reporter.playeroneTwo + " and a ";
      String menu;
      String lineup = "\n=============================="
-               + "\nWhat do you want to do?"
-               + "\n- hit - Gives you another card."
-               + "\n- stay - Keep your cards."
-               + "\n- help - Opens help menu."
-               + "\n- quit - Ends current game."
+               + "\n   What do you want to do?"
+               + "\n=============================="
+               + "\n - hit - Gives you another card."
+               + "\n - stay - Keep your cards."
+               + "\n - help - Opens help menu."
+               + "\n - quit - Ends current game."
             + "\n==============================\n";
      
      @SuppressWarnings("empty-statement")
