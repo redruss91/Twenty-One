@@ -55,7 +55,7 @@ public class Orders{
                
                case "hit":
                    //for hit
-                   playeroneHit = deck.myarray[11][0];
+                   
                    hitme();
                   
                    Twentyone.pauseProgram();
@@ -81,7 +81,7 @@ public class Orders{
                    break;
                    
                case "stay":
-                 //for hit                                  
+                 playeroneHit = deck.myarray[11][0];                                
                    bustin();
                   break;
                    
@@ -97,19 +97,20 @@ public class Orders{
    
    }
      
-     public void bustin(){            
-            if((reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit) == (reporter.playeroneOne + reporter.playeroneTwo + Orders.playeroneHit))
+     public void bustin(){
+         
+            if((reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit) == (reporter.playeroneOne + reporter.playeroneTwo + playeroneHit))
                     {System.out.println("\nTIE!!!");}   
-            else if((reporter.playeroneOne + reporter.playeroneTwo + Orders.playeroneHit) <= 21){
+            else if((reporter.playeroneOne + reporter.playeroneTwo + playeroneHit) <= 21){
                 
-                if((reporter.playeroneOne + reporter.playeroneTwo + Orders.playeroneHit) == 21)
-                    {System.out.println("\nP1 WINS!!! With " + (reporter.playeroneOne + Orders.playeroneHit + reporter.playeroneTwo)+" points!");}
+                if((reporter.playeroneOne + reporter.playeroneTwo + playeroneHit) == 21)
+                    {System.out.println("\nP1 WINS!!! With " + (reporter.playeroneOne + playeroneHit + reporter.playeroneTwo)+" points!");}
                 
-                else if((reporter.playeroneOne + reporter.playeroneTwo + Orders.playeroneHit) > (reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit))
-                    {System.out.println("\nP1 WINS!!! With " + (reporter.playeroneOne + Orders.playeroneHit + reporter.playeroneTwo)+" points!");}
+                else if((reporter.playeroneOne + reporter.playeroneTwo + playeroneHit) > (reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit))
+                    {System.out.println("\nP1 WINS!!! With " + (reporter.playeroneOne + playeroneHit + reporter.playeroneTwo)+" points!");}
                 
                 else if((reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit) > 21 )
-                    {System.out.println("\nP1 WINS!!! With " + (reporter.playeroneOne + Orders.playeroneHit + reporter.playeroneTwo)+" points!");}
+                    {System.out.println("\nP1 WINS!!! With " + (reporter.playeroneOne + playeroneHit + reporter.playeroneTwo)+" points!");}
                  }
             
             else if((reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit) <= 21){
@@ -117,10 +118,10 @@ public class Orders{
                 if((reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit) == 21)
                     {System.out.println("\nP2 WINS!!! With " + (reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit)+" points!");}
                 
-                else if((reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit) > (reporter.playeroneOne + reporter.playeroneTwo + Orders.playeroneHit))
+                else if((reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit) > (reporter.playeroneOne + reporter.playeroneTwo + playeroneHit))
                     {System.out.println("\nP2 WINS!!! With " + (reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit)+" points!");}
                 
-                else if((reporter.playeroneOne + reporter.playeroneTwo + Orders.playeroneHit) > 21 )
+                else if((reporter.playeroneOne + reporter.playeroneTwo + playeroneHit) > 21 )
                     {System.out.println("\nP2 WINS!!! With " + (reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit)+" points!");}
                 }
             
@@ -133,6 +134,7 @@ public class Orders{
      
      
      public void hitme(){
+         playeroneHit = deck.myarray[11][0];
         while (this.fore != true ){
          
                      if(reporter.playeroneOne + reporter.playeroneTwo > 21 && playeroneHit == 11)
@@ -160,6 +162,8 @@ public class Orders{
     
                         fore = true;
                     }  }  
+     
+     
       public void find() {
   
     boolean fore = false;
@@ -172,7 +176,7 @@ public class Orders{
     else if(reporter.playeroneOne == 11)
     {reporter.handhold += Twentyone.name + ", you have in your hand an ace of " + deck.suit();}
  
-    else if(reporter.playeroneOne == 1  && reporter.playeroneOne + reporter.playeroneTwo + Orders.playeroneHit <= 21)
+    else if(reporter.playeroneOne == 1  && reporter.playeroneOne + reporter.playeroneTwo + playeroneHit <= 21)
     {reporter.handhold += Twentyone.name + ", you have in your hand an ace of " + deck.suit(); reporter.playeroneOne = 11;}
     
     else if(reporter.playeroneOne >= 2 && reporter.playeroneOne <= 10)
@@ -203,7 +207,7 @@ public class Orders{
     else if(reporter.playeroneTwo == 11 )
     {System.out.println(reporter.handhold += " and an ace of " + deck.suit2());}
     
-    else if(reporter.playeroneTwo == 1 && reporter.playeroneOne + reporter.playeroneTwo + Orders.playeroneHit <= 21)
+    else if(reporter.playeroneTwo == 1 && reporter.playeroneOne + reporter.playeroneTwo + playeroneHit <= 21)
     {System.out.println(reporter.handhold += " and an ace of " + deck.suit2()); reporter.playeroneTwo = 11;}
     
     else if(reporter.playeroneTwo >= 2 && reporter.playeroneTwo <= 10)
@@ -225,22 +229,22 @@ public class Orders{
 
 public void findthree(){
   
-    if(Orders.playeroneHit == 11 || Orders.playeroneHit == 1){
+    if(playeroneHit == 11 || playeroneHit == 1){
                    System.out.println(" and an ace.");}
     
-                    else if(Orders.playeroneHit >= 2 && Orders.playeroneHit <= 10)
-                   {System.out.println(" and a " + Orders.playeroneHit);}
+                    else if(playeroneHit >= 2 && playeroneHit <= 10)
+                   {System.out.println(" and a " + playeroneHit);}
                     
-                   else if (Orders.playeroneHit == 11)
-                   {System.out.println(" and a jack."); Orders.playeroneHit = 10;}
+                   else if (playeroneHit == 11)
+                   {System.out.println(" and a jack."); playeroneHit = 10;}
                    
-                   else if (Orders.playeroneHit == 12)
-                   {System.out.println(" and a queen."); Orders.playeroneHit = 10;}
+                   else if (playeroneHit == 12)
+                   {System.out.println(" and a queen."); playeroneHit = 10;}
                    
-                   else if (Orders.playeroneHit == 13)
-                   {System.out.println(" and a king."); Orders.playeroneHit = 10;}
+                   else if (playeroneHit == 13)
+                   {System.out.println(" and a king."); playeroneHit = 10;}
 
-                   else {System.out.println("**Error**"); Orders.playeroneHit = 10;}
+                   else {System.out.println("**Error**"); playeroneHit = 10;}
                   
                   
 
@@ -249,10 +253,10 @@ public void findthree(){
 }
 public void htwin(){
       Orders orders = new Orders();
-                   if (Orders.playeroneHit + reporter.playeroneOne + reporter.playeroneTwo > 21)
+                   if (playeroneHit + reporter.playeroneOne + reporter.playeroneTwo > 21)
                        { System.out.println("\nBUST!");} //trying to end the game
                
-                   else if (reporter.playeroneOne + reporter.playeroneTwo + Orders.playeroneHit == 21)
+                   else if (reporter.playeroneOne + reporter.playeroneTwo + playeroneHit == 21)
                        {System.out.println("21!\n");}
 }
 }

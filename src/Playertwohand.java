@@ -7,16 +7,13 @@
  *
  * @author rtbro_000
  */
-public class Playertwohand {
+/**public class Playertwohand {
     
     Playeronehand one = new Playeronehand();
     boolean fore;
    //Will also be used later to display cards. 
     
-    /**
-     *
-     * @param name
-     */
+   
     public void findtwoOne() {
     boolean dat = false;
     //Deck one = new Deck();
@@ -103,7 +100,7 @@ public void displayhandone(){
     Orders noob = new Orders();
     
     if (one.playertwoHit + one.playertwoOne + one.playertwoTwo > 21)
-    { noob.i=2; System.out.println("BUST!");  noob.i = 2;} //trying to end the game
+    { noob.i=2; System.out.println("BUST!");} //trying to end the game
     
     else if (one.playertwoOne + one.playertwoTwo + Orders.playeroneHit == 21)
     {System.out.println("21!\n");}
@@ -111,29 +108,7 @@ public void displayhandone(){
     
     }
 
-
-public void bustin() {
-            //Deck one = new Deck();
-             Orders noob = new Orders();
-           
-                if ((one.playertwoOne + one.playertwoTwo + one.playertwoHit) == (one.playeroneOne + one.playeroneTwo + Orders.playeroneHit))
-                    {System.out.println("\nTIE!!!");}   
-                
-                else if(((one.playeroneOne + one.playeroneTwo + Orders.playeroneHit) > (one.playertwoOne + one.playertwoTwo + one.playertwoHit)) 
-                        || (one.playertwoOne + one.playertwoTwo + one.playertwoHit) > 21  && (one.playeroneOne + one.playeroneTwo + Orders.playeroneHit) <= 21)                    
-                     {System.out.println("\nP1 WINS!!! With " + (one.playeroneOne + Orders.playeroneHit + one.playeroneTwo)+" points!");}    
-                
-                else if(((one.playeroneOne + one.playeroneTwo + Orders.playeroneHit) < (one.playertwoOne + one.playertwoTwo + one.playertwoHit))
-                       || (one.playeroneOne + one.playeroneTwo + Orders.playeroneHit) > 21 && (one.playertwoOne + one.playertwoTwo + one.playertwoHit) <= 21)                    
-                    {System.out.println("\nP2 WINS!!!");}  
-                
-                else {System.out.println("\n**Error**");}
-                
-                             
-              }
 }
-
-    
-    
-    
+    */
+  
 
