@@ -7,9 +7,8 @@
  */
 public class Deck {
     //contains deck
-
    
-    int number;
+   
      int myarray[][] = {
         {1, 1, 1, 1},
         {2, 2, 2, 2},

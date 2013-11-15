@@ -36,14 +36,12 @@ public class Twentyone {
      Twentyone.pauseProgram();
         myGame.intromenu();
      Twentyone.pauseProg();
-            
-     Playeronehand tell = new Playeronehand();
-        tell.find();
-        tell.findtwo();
-       
-     Twentyone.pauseProgram();
-        
      Orders begin = new Orders();
+        begin.find();
+        begin.findtwo(); 
+        
+     Twentyone.pauseProgram();
+              
         begin.init();
        
    
