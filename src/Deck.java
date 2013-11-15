@@ -1,5 +1,5 @@
 
-import java.util.Random;
+
 
 /**
  *
@@ -7,8 +7,8 @@ import java.util.Random;
  */
 public class Deck {
     //contains deck
-    @SuppressWarnings("empty-statement")
-    Random cards = new Random();
+
+   
     int number;
      int myarray[][] = {
         {1, 1, 1, 1},

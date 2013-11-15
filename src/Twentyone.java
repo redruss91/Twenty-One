@@ -33,27 +33,20 @@ public class Twentyone {
      Twentyone myGame = new Twentyone();
         myGame.getName();
         myGame.displayHelp();
-        Twentyone.pauseProgram();
+     Twentyone.pauseProgram();
         myGame.intromenu();
-        Twentyone.pauseProg();
-        
-      Deck comp = new Deck();
-      //comp.suit();
-      
-     //Just so I knew that they would work.
-     //HelpMenuControl help = new HelpMenuControl();
-     //help.helptwo();     
-     //HelpMenuView helpview = new HelpMenuView();
-      
+     Twentyone.pauseProg();
+            
      Playeronehand tell = new Playeronehand();
         tell.find();
         tell.findtwo();
        
-        Twentyone.pauseProgram();
+     Twentyone.pauseProgram();
+        
      Orders begin = new Orders();
         begin.init();
        
-      
+   
     }
 public void intromenu(){
     HelpMenuControl exhelp = new HelpMenuControl();
