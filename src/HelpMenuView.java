@@ -38,8 +38,8 @@ public class HelpMenuView {
                 + "game is. Type 'rules' to display the rules of the game\n\n";
     String error = "Error: Invalid input. Please select one of\n"
                 + "the options listed, or try typing in all lowercase.\n";
-    String goback = "To return to the help menu, type 'menu'. To quit this\n"
-                + "program, type 'quit'\n";
+    String goback = "To return to the help menu, type 'menu'. To return to the main\n"
+            + "menu, type 'main'\n";
   
   //Kyle Russell Added all functions in this class
   
