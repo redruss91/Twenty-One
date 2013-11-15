@@ -1,5 +1,6 @@
 
 
+import java.io.Serializable;
 import java.util.Scanner;
 
 /*
@@ -11,7 +12,7 @@ import java.util.Scanner;
  *
  * Created by Riley Brown
  */
-public class Orders{
+public class Orders implements Serializable{
      
      
      Playeronehand reporter = new Playeronehand();
@@ -19,12 +20,12 @@ public class Orders{
      HelpMenuControl exhelp = new HelpMenuControl();
      Deck deck = new Deck();
      
-     static int playeroneHit;
-     boolean fore = false;
-     static int i = 0;
-     static boolean s = true;
-     String menu;
-     String lineup="\n=============================="
+     private static int playeroneHit;
+     private boolean fore = false;
+     private static int i = 0;
+     private static boolean s = true;
+     private String menu;
+     private String lineup="\n=============================="
                  + "\n   What do you want to do?"
                  + "\n=============================="
                  + "\n - hit - Gives you another card."
@@ -35,8 +36,88 @@ public class Orders{
 
     public Orders() {
     }
-     
- 
+
+    public Playeronehand getReporter() {
+        return reporter;
+    }
+
+    public void setReporter(Playeronehand reporter) {
+        this.reporter = reporter;
+    }
+
+    public HelpMenuView getForhelp() {
+        return forhelp;
+    }
+
+    public void setForhelp(HelpMenuView forhelp) {
+        this.forhelp = forhelp;
+    }
+
+    public HelpMenuControl getExhelp() {
+        return exhelp;
+    }
+
+    public void setExhelp(HelpMenuControl exhelp) {
+        this.exhelp = exhelp;
+    }
+
+    public Deck getDeck() {
+        return deck;
+    }
+
+    public void setDeck(Deck deck) {
+        this.deck = deck;
+    }
+
+    public static int getPlayeroneHit() {
+        return playeroneHit;
+    }
+
+    public static void setPlayeroneHit(int playeroneHit) {
+        Orders.playeroneHit = playeroneHit;
+    }
+
+    public boolean isFore() {
+        return fore;
+    }
+
+    public void setFore(boolean fore) {
+        this.fore = fore;
+    }
+
+    public static int getI() {
+        return i;
+    }
+
+    public static void setI(int i) {
+        Orders.i = i;
+    }
+
+    public static boolean isS() {
+        return s;
+    }
+
+    public static void setS(boolean s) {
+        Orders.s = s;
+    }
+
+    public String getMenu() {
+        return menu;
+    }
+
+    public void setMenu(String menu) {
+        this.menu = menu;
+    }
+
+    public String getLineup() {
+        return lineup;
+    }
+
+    public void setLineup(String lineup) {
+        this.lineup = lineup;
+    }
+
+      
      
    public void init(){
        
@@ -171,31 +252,33 @@ public class Orders{
        while (fore != true ){
           
     if(reporter.playeroneOne + reporter.playeroneTwo > 21 && reporter.playeroneOne == 11)
-    {reporter.playeroneOne = 1; reporter.handhold += Twentyone.name + ", you have in your hand an ace of " + deck.suit();}
+    {reporter.playeroneOne = 1; reporter.handhold = Twentyone.name + ", you have in your hand an ace of " + deck.suit();}
         
     else if(reporter.playeroneOne == 11)
-    {reporter.handhold += Twentyone.name + ", you have in your hand an ace of " + deck.suit();}
+    {reporter.handhold = Twentyone.name + ", you have in your hand an ace of " + deck.suit();}
  
     else if(reporter.playeroneOne == 1  && reporter.playeroneOne + reporter.playeroneTwo + playeroneHit <= 21)
-    {reporter.handhold += Twentyone.name + ", you have in your hand an ace of " + deck.suit(); reporter.playeroneOne = 11;}
+    {reporter.handhold = Twentyone.name + ", you have in your hand an ace of " + deck.suit(); reporter.playeroneOne = 11;}
     
     else if(reporter.playeroneOne >= 2 && reporter.playeroneOne <= 10)
-    {reporter.handhold += Twentyone.name + ", you have in your hand a " + reporter.playeroneOne +  " of " + deck.suit();}
+    {reporter.handhold = Twentyone.name + ", you have in your hand a " + reporter.playeroneOne +  " of " + deck.suit();}
 
     else if(reporter.playeroneOne == 11)
-    {reporter.handhold += Twentyone.name + ", you have in your hand a jack of " + deck.suit(); reporter.playeroneOne = 10;}
+    {reporter.handhold = Twentyone.name + ", you have in your hand a jack of " + deck.suit(); reporter.playeroneOne = 10;}
     
      else if(reporter.playeroneOne == 12)
-    {reporter.handhold += Twentyone.name + ", you have in your hand a queen of " + deck.suit(); reporter.playeroneOne = 10;}
+    {reporter.handhold = Twentyone.name + ", you have in your hand a queen of " + deck.suit(); reporter.playeroneOne = 10;}
      
       else if(reporter.playeroneOne == 13)
-    {reporter.handhold += Twentyone.name + ", you have in your hand a king of " + deck.suit(); reporter.playeroneOne = 10;}
+    {reporter.handhold = Twentyone.name + ", you have in your hand a king of " + deck.suit(); reporter.playeroneOne = 10;}
 
     else {System.out.println("**Error**");}
     
         fore = true;
      }
     }
+      
+      
       public void findtwo() {
    
     boolean fore = false;
