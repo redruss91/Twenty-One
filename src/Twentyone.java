@@ -2,15 +2,13 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
 import java.util.Scanner;
-
 /**
  *
  * @author rtbro_000
  */
 public class Twentyone {
+    private static Scanner inFile = new Scanner(System.in);
     String choice;
     static String name = "";
       String telltell = "=============================\n"
@@ -28,7 +26,8 @@ public class Twentyone {
             + "        as possible without going over.\n"
             + "They can hit (recieve more cards) or stay (keep cards).\n"
             + "**************************************************\n";
-    
+    public static Scanner getInputFile(){
+        return Twentyone.inFile;}
     public static void main(String[] args) {
      Twentyone myGame = new Twentyone();
         myGame.getName();
@@ -49,9 +48,9 @@ public class Twentyone {
 public void intromenu(){
     HelpMenuControl exhelp = new HelpMenuControl();
     for(int i =0; i < 1; ){   
-    Scanner input = new Scanner(System.in);
+    Scanner inFile = Twentyone.getInputFile();
     System.out.println(telltell);
-    this.choice = input.next();
+    this.choice = inFile.next();
 
         if("start".equals(this.choice)){i = 1; 
                     }                
@@ -71,10 +70,10 @@ public void intromenu(){
 
 public void getName() {
     
-Scanner input = new Scanner(System.in);
+Scanner inFile = Twentyone.getInputFile();
 System.out.println("*********************\n"
         + "Player 1, enter your name: \n");
-Twentyone.name = input.next();
+Twentyone.name = inFile.next();
 }
 
 

@@ -1,19 +1,12 @@
-
-
 import java.io.Serializable;
 import java.util.Scanner;
-
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  *
  * Created by Riley Brown
  */
+
 public class Orders implements Serializable{
-     
      
      Playeronehand reporter = new Playeronehand();
      HelpMenuView forhelp = new HelpMenuView();
@@ -25,7 +18,8 @@ public class Orders implements Serializable{
      private static int i = 0;
      private static boolean s = true;
      private String menu;
-     private String lineup="\n=============================="
+     private String lineup=
+                   "\n=============================="
                  + "\n   What do you want to do?"
                  + "\n=============================="
                  + "\n - hit - Gives you another card."
@@ -119,9 +113,9 @@ public class Orders implements Serializable{
 
       
      
-   public void init(){
+  public void init(){
        
-       Scanner input = new Scanner(System.in);
+       Scanner inFile = Twentyone.getInputFile();
        String other;
    
         
@@ -131,7 +125,7 @@ public class Orders implements Serializable{
         
         
        System.out.println(this.lineup);
-       this.menu = input.next(); 
+       this.menu = inFile.next(); 
            switch (this.menu) {
                
                case "hit":
@@ -178,7 +172,7 @@ public class Orders implements Serializable{
    
    }
      
-     public void bustin(){
+  public void bustin(){
          
             if((reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit) == (reporter.playeroneOne + reporter.playeroneTwo + playeroneHit))
                     {System.out.println("\nTIE!!!");}   
@@ -211,10 +205,7 @@ public class Orders implements Serializable{
                             
               }
      
-     
-     
-     
-     public void hitme(){
+  public void hitme(){
          playeroneHit = deck.myarray[11][0];
         while (this.fore != true ){
          
@@ -244,8 +235,7 @@ public class Orders implements Serializable{
                         fore = true;
                     }  }  
      
-     
-      public void find() {
+  public void find() {
   
     boolean fore = false;
     
@@ -277,9 +267,8 @@ public class Orders implements Serializable{
         fore = true;
      }
     }
-      
-      
-      public void findtwo() {
+          
+  public void findtwo() {
    
     boolean fore = false;
      while (fore != true ){
@@ -310,7 +299,7 @@ public class Orders implements Serializable{
      }
 }
 
-public void findthree(){
+  public void findthree(){
   
     if(playeroneHit == 11 || playeroneHit == 1){
                    System.out.println(" and an ace.");}
@@ -334,7 +323,8 @@ public void findthree(){
 
 
 }
-public void htwin(){
+
+  public void htwin(){
       Orders orders = new Orders();
                    if (playeroneHit + reporter.playeroneOne + reporter.playeroneTwo > 21)
                        { System.out.println("\nBUST!");} //trying to end the game

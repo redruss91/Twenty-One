@@ -1,11 +1,11 @@
 
-
+import java.io.Serializable;
 
 /**
  *
  * @author Riley
  */
-public class Deck {
+public class Deck implements Serializable{
     //contains deck
    
    
@@ -24,6 +24,9 @@ public class Deck {
         {12, 12, 12, 12},
         {13, 13, 13, 13},
                          };
+
+    public Deck() {
+    }
    
     
     
