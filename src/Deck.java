@@ -9,7 +9,7 @@ public class Deck implements Serializable{
     //contains deck
    
    
-     int myarray[][] = {
+    static int myarray[][] = {
         {1, 1, 1, 1},
         {2, 2, 2, 2},
         {3, 3, 3, 3},
@@ -27,25 +27,49 @@ public class Deck implements Serializable{
 
     public Deck() {
     }
-   
-    
-    
-    
-    public String suit(){
-   
-        return "hearts";
-        
+
+    public static int[][] getMyarray() {
+        return myarray;
     }
-     
-   
-    
+
+    public static void setMyarray(int[][] myarray) {
+        Deck.myarray = myarray;
+    }
+
+    public void callInnerMethod() {
+
+       Playeronehand inner = new Playeronehand();
+       
+    }
 
     
+  //
+    //
+    //
+    //
+    
+    public String suit(){
+        return "hearts";
+    }
+    
+    public class Playeronehand {
+    Deck one = new Deck();
+        
+    public String handhold = "";
+    int playeroneOne = Deck.myarray[3][1]; 
+    int playeroneTwo = Deck.myarray[8][3];
+    
+    
+    int playertwoOne = 9;
+    int playertwoTwo = 3;  
+    int playertwoHit = 2;
+    
+
+
+}  
     
     public String suit2(){
- 
         return "spades";
-        
     }
     
     }

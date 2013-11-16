@@ -26,8 +26,10 @@ public class Twentyone {
             + "        as possible without going over.\n"
             + "They can hit (recieve more cards) or stay (keep cards).\n"
             + "**************************************************\n";
+    
     public static Scanner getInputFile(){
         return Twentyone.inFile;}
+    
     public static void main(String[] args) {
      Twentyone myGame = new Twentyone();
         myGame.getName();
@@ -48,9 +50,9 @@ public class Twentyone {
 public void intromenu(){
     HelpMenuControl exhelp = new HelpMenuControl();
     for(int i =0; i < 1; ){   
-    Scanner inFile = Twentyone.getInputFile();
+    Scanner fir = Twentyone.getInputFile();
     System.out.println(telltell);
-    this.choice = inFile.next();
+    this.choice = fir.next();
 
         if("start".equals(this.choice)){i = 1; 
                     }                
@@ -70,10 +72,10 @@ public void intromenu(){
 
 public void getName() {
     
-Scanner inFile = Twentyone.getInputFile();
+Scanner fit = Twentyone.getInputFile();
 System.out.println("*********************\n"
         + "Player 1, enter your name: \n");
-Twentyone.name = inFile.next();
+Twentyone.name = fit.next();
 }
 
 

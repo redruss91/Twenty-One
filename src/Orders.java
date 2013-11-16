@@ -8,10 +8,12 @@ import java.util.Scanner;
 
 public class Orders implements Serializable{
      
-     Playeronehand reporter = new Playeronehand();
+     
      HelpMenuView forhelp = new HelpMenuView();
      HelpMenuControl exhelp = new HelpMenuControl();
      Deck deck = new Deck();
+     Deck.Playeronehand reporter = deck.new Playeronehand();
+     
      
      private static int playeroneHit;
      private boolean fore = false;
@@ -29,14 +31,6 @@ public class Orders implements Serializable{
                  + "\n==============================\n";
 
     public Orders() {
-    }
-
-    public Playeronehand getReporter() {
-        return reporter;
-    }
-
-    public void setReporter(Playeronehand reporter) {
-        this.reporter = reporter;
     }
 
     public HelpMenuView getForhelp() {
@@ -61,6 +55,14 @@ public class Orders implements Serializable{
 
     public void setDeck(Deck deck) {
         this.deck = deck;
+    }
+
+    public Deck.Playeronehand getReporter() {
+        return reporter;
+    }
+
+    public void setReporter(Deck.Playeronehand reporter) {
+        this.reporter = reporter;
     }
 
     public static int getPlayeroneHit() {
@@ -156,7 +158,7 @@ public class Orders implements Serializable{
                    break;
                    
                case "stay":
-                 playeroneHit = deck.myarray[11][0];                                
+                 playeroneHit = Deck.myarray[11][0];                                
                    bustin();
                   break;
                    
