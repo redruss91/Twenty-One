@@ -2,16 +2,17 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+import java.io.Serializable;
 import java.util.Scanner;
 /**
  *
  * @author rtbro_000
  */
-public class Twentyone {
+public class Twentyone implements Serializable{
     private static Scanner inFile = new Scanner(System.in);
     String choice;
     static String name = "";
-      String telltell = "=============================\n"
+       String telltell = "=============================\n"
             + "\tMAIN MENU\n"
             + "=============================\n\n"
             + " Type:\n"
@@ -19,7 +20,7 @@ public class Twentyone {
             + "   help - For the help menu.\n"
             + "   quit - To end the game.\n"
             + "=============================\n";
-    String instructions = 
+    static String instructions = 
           
             "\n**____________________________________________**\n"
             + "    Players have to try to get as close to 21\n"

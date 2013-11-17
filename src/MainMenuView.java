@@ -1,4 +1,5 @@
 
+import java.io.Serializable;
 import java.util.Scanner;
 
 /*
@@ -10,7 +11,7 @@ import java.util.Scanner;
  *
  * @author aziekayrussell
  */
-public class MainMenuView {
+public class MainMenuView implements Serializable {
     
     MainMenuControl MainMenu = new MainMenuControl();
     mainGame Game = new mainGame();

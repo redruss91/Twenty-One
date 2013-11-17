@@ -1,4 +1,5 @@
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,23 +12,23 @@ import java.util.Scanner;
  *
  * @author kylerussell
  */
-public class cards {
-    String ace = "1 or 11";
-    int ace1 = 11;
-    int two = 2;
-    int three = 3;
-    int four = 4;
-    int five= 5;
-    int six = 6;
-    int seven = 7;
-    int eight = 8;
-    int nine = 9;
-    int ten = 10;
-    int jack = 10;
-    int queen = 10;
-    int king = 10;
+public class cards implements Serializable{
+    private static String ace = "1 or 11";
+    private static int ace1 = 11;
+    private static int two = 2;
+    private static int three = 3;
+    private static int four = 4;
+    private static int five= 5;
+    private static int six = 6;
+    private static int seven = 7;
+    private static int eight = 8;
+    private static int nine = 9;
+    private static int ten = 10;
+    private static int jack = 10;
+    private static int queen = 10;
+    private static int king = 10;
     
-    String number;
+    private static String number;
     
     
     

@@ -1,4 +1,7 @@
 
+import java.io.Serializable;
+
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -8,13 +11,13 @@
  *
  * @author aziekayrussell
  */
-public class MainMenuControl {
+public class MainMenuControl implements Serializable {
     
-    int menu = 0;
+    static int menu = 0;
     
-    String error = "Error: Invalid input. Please select one of\n"
+    static String error = "Error: Invalid input. Please select one of\n"
                 + "the options listed.\n";
-    String goback = "To return to the help menu, type 'menu'. To quit this\n"
+    static String goback = "To return to the help menu, type 'menu'. To quit this\n"
                 + "program, type 'quit'\n";
     
     public void descriptionMain(){

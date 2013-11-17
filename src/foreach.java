@@ -1,4 +1,5 @@
 
+import java.io.Serializable;
 import java.util.Scanner;
 
 
@@ -7,7 +8,7 @@ import java.util.Scanner;
  *
  * @author Riley
  */
-public class foreach{
+public class foreach implements Serializable{
     //built by Riley Brown
 
     public static void main(String args[]){
