@@ -1,13 +1,13 @@
 
-import java.io.Serializable;
+
 
 /**
  *
  * @author Riley
  */
-public class Deck implements Serializable{
+public class Deck{
     //contains deck
-   
+
    
     static int myarray[][] = {
         {1, 1, 1, 1},
@@ -25,16 +25,7 @@ public class Deck implements Serializable{
         {13, 13, 13, 13},
                          };
 
-    public Deck() {
-    }
-
-    public static int[][] getMyarray() {
-        return myarray;
-    }
-
-    public static void setMyarray(int[][] myarray) {
-        Deck.myarray = myarray;
-    }
+    
 
     public void callInnerMethod() {
 
@@ -48,29 +39,47 @@ public class Deck implements Serializable{
     //
     //
     
-    public String suit(){
-        return "hearts";
-    }
+    public class Playeronehand extends Deck{
+   
+  
     
-    public class Playeronehand {
-    Deck one = new Deck();
-        
+    //P1 Hand -- Riley
     public String handhold = "";
-    int playeroneOne = Deck.myarray[3][1]; 
-    int playeroneTwo = Deck.myarray[8][3];
+    int playeroneOne = myarray[3][2]; 
+    int playeroneTwo = myarray[0][1];
+    int playeroneHit = 00;
     
-    
+    //P2 Hand --Riley
     int playertwoOne = 9;
     int playertwoTwo = 3;  
     int playertwoHit = 2;
     
 
+    public void hitreturn(){
+    Orders orders = new Orders();
+    if (orders.fore = true){
+    playeroneHit = myarray[6][3];}
+    }
 
 }  
+     public String suit(){
+        return "hearts";
+    }
     
     public String suit2(){
         return "spades";
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     }
 

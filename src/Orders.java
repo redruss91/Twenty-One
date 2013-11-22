@@ -1,4 +1,4 @@
-import java.io.Serializable;
+
 import java.util.Scanner;
 
 /**
@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Created by Riley Brown
  */
 
-public class Orders implements Serializable{
+public class Orders{
      
      
      HelpMenuView forhelp = new HelpMenuView();
@@ -15,8 +15,8 @@ public class Orders implements Serializable{
      Deck.Playeronehand reporter = deck.new Playeronehand();
      
      
-     private static int playeroneHit;
-     private boolean fore = false;
+     
+     boolean fore = false;
      private static int i = 0;
      private static boolean s = true;
      private String menu;
@@ -30,90 +30,7 @@ public class Orders implements Serializable{
                  + "\n - quit - Ends current game."
                  + "\n==============================\n";
 
-    public Orders() {
-    }
-
-    public HelpMenuView getForhelp() {
-        return forhelp;
-    }
-
-    public void setForhelp(HelpMenuView forhelp) {
-        this.forhelp = forhelp;
-    }
-
-    public HelpMenuControl getExhelp() {
-        return exhelp;
-    }
-
-    public void setExhelp(HelpMenuControl exhelp) {
-        this.exhelp = exhelp;
-    }
-
-    public Deck getDeck() {
-        return deck;
-    }
-
-    public void setDeck(Deck deck) {
-        this.deck = deck;
-    }
-
-    public Deck.Playeronehand getReporter() {
-        return reporter;
-    }
-
-    public void setReporter(Deck.Playeronehand reporter) {
-        this.reporter = reporter;
-    }
-
-    public static int getPlayeroneHit() {
-        return playeroneHit;
-    }
-
-    public static void setPlayeroneHit(int playeroneHit) {
-        Orders.playeroneHit = playeroneHit;
-    }
-
-    public boolean isFore() {
-        return fore;
-    }
-
-    public void setFore(boolean fore) {
-        this.fore = fore;
-    }
-
-    public static int getI() {
-        return i;
-    }
-
-    public static void setI(int i) {
-        Orders.i = i;
-    }
-
-    public static boolean isS() {
-        return s;
-    }
-
-    public static void setS(boolean s) {
-        Orders.s = s;
-    }
-
-    public String getMenu() {
-        return menu;
-    }
-
-    public void setMenu(String menu) {
-        this.menu = menu;
-    }
-
-    public String getLineup() {
-        return lineup;
-    }
-
-    public void setLineup(String lineup) {
-        this.lineup = lineup;
-    }
-
-      
+    
      
   public void init(){
        
@@ -132,7 +49,7 @@ public class Orders implements Serializable{
                
                case "hit":
                    //for hit
-                   
+                   reporter.hitreturn();
                    hitme();
                   
                    Twentyone.pauseProgram();
@@ -158,7 +75,7 @@ public class Orders implements Serializable{
                    break;
                    
                case "stay":
-                 playeroneHit = Deck.myarray[11][0];                                
+                 reporter.playeroneHit = Deck.myarray[11][0];                                
                    bustin();
                   break;
                    
@@ -176,18 +93,18 @@ public class Orders implements Serializable{
      
   public void bustin(){
          
-            if((reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit) == (reporter.playeroneOne + reporter.playeroneTwo + playeroneHit))
+            if((reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit) == (reporter.playeroneOne + reporter.playeroneTwo + reporter.playeroneHit))
                     {System.out.println("\nTIE!!!");}   
-            else if((reporter.playeroneOne + reporter.playeroneTwo + playeroneHit) <= 21){
+            else if((reporter.playeroneOne + reporter.playeroneTwo + reporter.playeroneHit) <= 21){
                 
-                if((reporter.playeroneOne + reporter.playeroneTwo + playeroneHit) == 21)
-                    {System.out.println("\nP1 WINS!!! With " + (reporter.playeroneOne + playeroneHit + reporter.playeroneTwo)+" points!");}
+                if((reporter.playeroneOne + reporter.playeroneTwo + reporter.playeroneHit) == 21)
+                    {System.out.println("\nP1 WINS!!! With " + (reporter.playeroneOne + reporter.playeroneHit + reporter.playeroneTwo)+" points!");}
                 
-                else if((reporter.playeroneOne + reporter.playeroneTwo + playeroneHit) > (reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit))
-                    {System.out.println("\nP1 WINS!!! With " + (reporter.playeroneOne + playeroneHit + reporter.playeroneTwo)+" points!");}
+                else if((reporter.playeroneOne + reporter.playeroneTwo + reporter.playeroneHit) > (reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit))
+                    {System.out.println("\nP1 WINS!!! With " + (reporter.playeroneOne + reporter.playeroneHit + reporter.playeroneTwo)+" points!");}
                 
                 else if((reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit) > 21 )
-                    {System.out.println("\nP1 WINS!!! With " + (reporter.playeroneOne + playeroneHit + reporter.playeroneTwo)+" points!");}
+                    {System.out.println("\nP1 WINS!!! With " + (reporter.playeroneOne + reporter.playeroneHit + reporter.playeroneTwo)+" points!");}
                  }
             
             else if((reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit) <= 21){
@@ -195,10 +112,10 @@ public class Orders implements Serializable{
                 if((reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit) == 21)
                     {System.out.println("\nP2 WINS!!! With " + (reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit)+" points!");}
                 
-                else if((reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit) > (reporter.playeroneOne + reporter.playeroneTwo + playeroneHit))
+                else if((reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit) > (reporter.playeroneOne + reporter.playeroneTwo + reporter.playeroneHit))
                     {System.out.println("\nP2 WINS!!! With " + (reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit)+" points!");}
                 
-                else if((reporter.playeroneOne + reporter.playeroneTwo + playeroneHit) > 21 )
+                else if((reporter.playeroneOne + reporter.playeroneTwo + reporter.playeroneHit) > 21 )
                     {System.out.println("\nP2 WINS!!! With " + (reporter.playertwoOne + reporter.playertwoTwo + reporter.playertwoHit)+" points!");}
                 }
             
@@ -208,28 +125,28 @@ public class Orders implements Serializable{
               }
      
   public void hitme(){
-         playeroneHit = deck.myarray[11][0];
-        while (this.fore != true ){
+         reporter.playeroneHit = Deck.myarray[11][0];
+        while (this.fore = false ){
          
-                     if(reporter.playeroneOne + reporter.playeroneTwo > 21 && playeroneHit == 11)
+                     if(reporter.playeroneOne + reporter.playeroneTwo > 21 && reporter.playeroneHit == 11)
                         {reporter.playeroneTwo = 1; System.out.println("you recieve an ace");}
     
-                    else if(playeroneHit == 11 )
+                    else if(reporter.playeroneHit == 11 )
                         {System.out.println("\nYou recieve an ace");}
     
-                    else if(playeroneHit == 1 && reporter.playeroneOne + reporter.playeroneTwo + playeroneHit <= 21)
+                    else if(reporter.playeroneHit == 1 && reporter.playeroneOne + reporter.playeroneTwo + reporter.playeroneHit <= 21)
                         {System.out.println("\nYou recieve an ace"); reporter.playeroneTwo = 11;}
     
-                    else if(playeroneHit >= 2 && playeroneHit <= 10)
-                        {System.out.println("\nYou receive a " + playeroneHit);}
+                    else if(reporter.playeroneHit >= 2 && reporter.playeroneHit <= 10)
+                        {System.out.println("\nYou receive a " + reporter.playeroneHit);}
 
-                    else if (playeroneHit == 11)
+                    else if (reporter.playeroneHit == 11)
                         {System.out.println("\nYou recieve a jack");}
     
-                    else if (playeroneHit == 12)
+                    else if (reporter.playeroneHit == 12)
                          {System.out.println("\nYou recieve a queen");}
     
-                    else if (playeroneHit == 13)
+                    else if (reporter.playeroneHit == 13)
                          {System.out.println("\nYou recieve a king");}
 
                     else {System.out.println("**Error**");}
@@ -238,10 +155,10 @@ public class Orders implements Serializable{
                     }  }  
      
   public void find() {
-  
-    boolean fore = false;
+  Deck deck = new Deck();
+    boolean fight = false;
     
-       while (fore != true ){
+       while (fight != true ){
           
     if(reporter.playeroneOne + reporter.playeroneTwo > 21 && reporter.playeroneOne == 11)
     {reporter.playeroneOne = 1; reporter.handhold = Twentyone.name + ", you have in your hand an ace of " + deck.suit();}
@@ -249,7 +166,7 @@ public class Orders implements Serializable{
     else if(reporter.playeroneOne == 11)
     {reporter.handhold = Twentyone.name + ", you have in your hand an ace of " + deck.suit();}
  
-    else if(reporter.playeroneOne == 1  && reporter.playeroneOne + reporter.playeroneTwo + playeroneHit <= 21)
+    else if(reporter.playeroneOne == 1  && reporter.playeroneOne + reporter.playeroneTwo + reporter.playeroneHit <= 21)
     {reporter.handhold = Twentyone.name + ", you have in your hand an ace of " + deck.suit(); reporter.playeroneOne = 11;}
     
     else if(reporter.playeroneOne >= 2 && reporter.playeroneOne <= 10)
@@ -266,14 +183,14 @@ public class Orders implements Serializable{
 
     else {System.out.println("**Error**");}
     
-        fore = true;
+        fight = true;
      }
     }
           
   public void findtwo() {
-   
-    boolean fore = false;
-     while (fore != true ){
+   Deck deck = new Deck();
+    boolean finn = false;
+     while (finn != true ){
                 
    if(reporter.playeroneOne + reporter.playeroneTwo > 21 && reporter.playeroneTwo == 11)
     {reporter.playeroneTwo = 1; System.out.println(reporter.handhold += " and an ace of " + deck.suit2());}
@@ -281,7 +198,7 @@ public class Orders implements Serializable{
     else if(reporter.playeroneTwo == 11 )
     {System.out.println(reporter.handhold += " and an ace of " + deck.suit2());}
     
-    else if(reporter.playeroneTwo == 1 && reporter.playeroneOne + reporter.playeroneTwo + playeroneHit <= 21)
+    else if(reporter.playeroneTwo == 1 && reporter.playeroneOne + reporter.playeroneTwo + reporter.playeroneHit <= 21)
     {System.out.println(reporter.handhold += " and an ace of " + deck.suit2()); reporter.playeroneTwo = 11;}
     
     else if(reporter.playeroneTwo >= 2 && reporter.playeroneTwo <= 10)
@@ -297,28 +214,28 @@ public class Orders implements Serializable{
     {System.out.println(reporter.handhold += " and a king of  " + deck.suit2());  reporter.playeroneTwo = 10;}
 
     else {System.out.println("**Error**");}
-     fore = true;
+     finn = true;
      }
 }
 
   public void findthree(){
   
-    if(playeroneHit == 11 || playeroneHit == 1){
+    if(reporter.playeroneHit == 11 || reporter.playeroneHit == 1){
                    System.out.println(" and an ace.");}
     
-                    else if(playeroneHit >= 2 && playeroneHit <= 10)
-                   {System.out.println(" and a " + playeroneHit);}
+                    else if(reporter.playeroneHit >= 2 && reporter.playeroneHit <= 10)
+                   {System.out.println(" and a " + reporter.playeroneHit);}
                     
-                   else if (playeroneHit == 11)
-                   {System.out.println(" and a jack."); playeroneHit = 10;}
+                   else if (reporter.playeroneHit == 11)
+                   {System.out.println(" and a jack."); reporter.playeroneHit = 10;}
                    
-                   else if (playeroneHit == 12)
-                   {System.out.println(" and a queen."); playeroneHit = 10;}
+                   else if (reporter.playeroneHit == 12)
+                   {System.out.println(" and a queen."); reporter.playeroneHit = 10;}
                    
-                   else if (playeroneHit == 13)
-                   {System.out.println(" and a king."); playeroneHit = 10;}
+                   else if (reporter.playeroneHit == 13)
+                   {System.out.println(" and a king."); reporter.playeroneHit = 10;}
 
-                   else {System.out.println("**Error**"); playeroneHit = 10;}
+                   else {System.out.println("**Error**"); reporter.playeroneHit = 10;}
                   
                   
 
@@ -328,10 +245,10 @@ public class Orders implements Serializable{
 
   public void htwin(){
       Orders orders = new Orders();
-                   if (playeroneHit + reporter.playeroneOne + reporter.playeroneTwo > 21)
+                   if (reporter.playeroneHit + reporter.playeroneOne + reporter.playeroneTwo > 21)
                        { System.out.println("\nBUST!");} //trying to end the game
                
-                   else if (reporter.playeroneOne + reporter.playeroneTwo + playeroneHit == 21)
+                   else if (reporter.playeroneOne + reporter.playeroneTwo + reporter.playeroneHit == 21)
                        {System.out.println("21!\n");}
 }
 }
