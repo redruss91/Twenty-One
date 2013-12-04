@@ -15,8 +15,8 @@ public class MainMenuView implements Serializable {
     
     MainMenuControl MainMenu = new MainMenuControl();
     mainGame Game = new mainGame();
-    HelpMenuControl help = new HelpMenuControl();
-    HelpMenuView helpTwo = new HelpMenuView();
+    HelpMenuView help = new HelpMenuView();
+    HelpMenuControl helpTwo = new HelpMenuControl();
     
     public void mainMenu(){
         

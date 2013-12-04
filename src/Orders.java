@@ -9,8 +9,8 @@ import java.util.Scanner;
 public class Orders{
      
      
-     HelpMenuView forhelp = new HelpMenuView();
-     HelpMenuControl exhelp = new HelpMenuControl();
+     HelpMenuControl forhelp = new HelpMenuControl();
+     HelpMenuView exhelp = new HelpMenuView();
      Deck deck = new Deck();
      Deck.Playeronehand reporter = deck.new Playeronehand();
      

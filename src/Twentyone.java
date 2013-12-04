@@ -49,7 +49,7 @@ public class Twentyone implements Serializable{
    
     }
 public void intromenu(){
-    HelpMenuControl exhelp = new HelpMenuControl();
+    HelpMenuView exhelp = new HelpMenuView();
     for(int i =0; i < 1; ){   
     Scanner fir = Twentyone.getInputFile();
     System.out.println(telltell);

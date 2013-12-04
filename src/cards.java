@@ -31,15 +31,6 @@ public class cards implements Serializable{
     private static String number;
     
     
-    
-    public static void main(String[] args){
-       
-        cards myGame = new cards();
-        myGame.demonstration();
-        
-       
-    }
-    
     public void displayCardValue(){
         
          ArrayList<String> cards = new ArrayList<>();
