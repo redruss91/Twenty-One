@@ -1,7 +1,10 @@
+package cit260.main;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+import cit260.twentyone.views.HelpMenuView;
 import java.io.Serializable;
 import java.util.Scanner;
 /**

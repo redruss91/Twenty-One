@@ -1,5 +1,8 @@
+package cit260.twentyone.views;
+
 
 import java.util.Scanner;
+import cit260.main.HelpMenuControl;
 
 
 /**

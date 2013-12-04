@@ -1,3 +1,5 @@
+package cit260.main;
+
 
 import java.io.Serializable;
 import java.util.Scanner;

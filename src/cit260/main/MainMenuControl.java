@@ -1,3 +1,5 @@
+package cit260.main;
+
 
 import java.io.Serializable;
 
@@ -13,7 +15,7 @@ import java.io.Serializable;
  */
 public class MainMenuControl implements Serializable {
     
-    static int menu = 0;
+    public int menu = 0;
     
     static String error = "Error: Invalid input. Please select one of\n"
                 + "the options listed.\n";

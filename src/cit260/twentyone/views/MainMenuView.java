@@ -1,4 +1,10 @@
+package cit260.twentyone.views;
 
+
+import cit260.twentyone.views.HelpMenuView;
+import cit260.main.MainMenuControl;
+import cit260.main.HelpMenuControl;
+import cit260.main.mainGame;
 import java.io.Serializable;
 import java.util.Scanner;
 
@@ -11,6 +17,8 @@ import java.util.Scanner;
  *
  * @author aziekayrussell
  */
+
+
 public class MainMenuView implements Serializable {
     
     MainMenuControl MainMenu = new MainMenuControl();
