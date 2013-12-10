@@ -2,8 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package ticTacToe;
+package cit260.main;
 
+import cit260.twentyone.views.MainMenuView;
 import java.util.Scanner;
 
 /**
@@ -14,7 +15,7 @@ import java.util.Scanner;
 
 
 
-public class MainMenuView extends Menu {
+public class MainMenuControl extends Menu {
     
     private static final String[][] menuItems = {
         {"1", "One player game"},
@@ -25,8 +26,8 @@ public class MainMenuView extends Menu {
   
     MainMenuControl mainCommands = new MainMenuControl();
     
-    public MainMenuView() {
-        super(MainMenuView.menuItems);
+    public MainMenuControl() {
+        super(MainMenuControl.menuItems);
     }
     
     @Override
@@ -46,7 +47,7 @@ public class MainMenuView extends Menu {
                     this.startGame(2);
                     break;
                 case "H":
-                    HelpMenuView helpMenu = TicTacToe.getHelpMenu();
+                    HelpMenuControl helpMenu = Twentyone.getHelpMenu();
                     helpMenu.executeCommands(null);
                     break;
                 case "X":
