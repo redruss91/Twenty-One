@@ -1,5 +1,7 @@
 package cit260.main;
 
+import java.util.Scanner;
+
 public abstract class Menu {
 
     private String[][] menuItems = null;
@@ -43,6 +45,25 @@ public abstract class Menu {
             }
         }
         return false;
+    }
+    
+    protected final String getCommand() {
+
+        Scanner inFile = Twentyone.getInputFile();
+        String command;
+        boolean valid = false;
+        do {
+            command = inFile.nextLine();
+            command = command.trim().toUpperCase();
+            valid = validCommand(command);
+            if (!validCommand(command)) {
+                new TwentyOneError().displayError("Invalid command. Please enter a valid command.");
+                continue;
+            }
+                
+        } while (!valid);
+        
+        return command;
     }
 
 }
