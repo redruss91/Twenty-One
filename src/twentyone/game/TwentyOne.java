@@ -2,7 +2,6 @@ package twentyone.game;
 
 import twentyone.models.Deck;
 import twentyone.menus.MainMenuView;
-import static twentyone.game.Player.playerName;
 import twentyone.exceptions.ExceptionMenu;
 
 /**
