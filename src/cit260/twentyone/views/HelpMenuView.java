@@ -3,6 +3,7 @@ package cit260.twentyone.views;
 
 import java.util.Scanner;
 import cit260.main.HelpMenuControl;
+import cit260.main.Menu;
 
 
 /**
@@ -14,7 +15,7 @@ import cit260.main.HelpMenuControl;
 //Kyle Russell created the functions and the If and While Functions, as well
 //as the user interaction.
 
-public class HelpMenuView {
+public class HelpMenuView extends Menu{
     HelpMenuControl forhelp = new HelpMenuControl();
     String decide;
     
@@ -59,5 +60,10 @@ public class HelpMenuView {
         }
         }
         
+    }
+
+    @Override
+    public String executeCommands(Object object) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
