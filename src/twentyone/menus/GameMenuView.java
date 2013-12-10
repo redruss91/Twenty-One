@@ -47,7 +47,7 @@ public class GameMenuView extends Menu implements ShowHelp {
                     }
                     break;
                 case "S":
-                    gameMenuControl.stand();
+                    gameMenuControl.stay();
                     return "QUIT";
                 case "Q": 
                     return "QUIT";
