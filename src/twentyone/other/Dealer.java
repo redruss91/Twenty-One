@@ -2,10 +2,10 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package twentyone.models;
+package twentyone.other;
 
 
-import twentyone.game.TwentyOne;
+import twentyone.maingame.TwentyOne;
 /*
  *
  * @author Kyle Russell

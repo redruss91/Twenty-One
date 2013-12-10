@@ -10,8 +10,8 @@ package twentyone.menus;
 
 import java.util.Scanner;
 
-import twentyone.game.Game;
-import twentyone.game.TwentyOne;
+import twentyone.maingame.Game;
+import twentyone.maingame.TwentyOne;
 import twentyone.exceptions.ExceptionMenu;
 
 /**

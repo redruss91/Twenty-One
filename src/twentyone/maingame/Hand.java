@@ -1,6 +1,6 @@
-package twentyone.game;
+package twentyone.maingame;
 
-import twentyone.models.Card;
+import twentyone.other.Card;
 
 public class Hand {
     int place = 2;

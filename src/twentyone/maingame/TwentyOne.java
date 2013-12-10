@@ -1,6 +1,6 @@
-package twentyone.game;
+package twentyone.maingame;
 
-import twentyone.models.Deck;
+import twentyone.other.Deck;
 import twentyone.menus.MainMenuView;
 import twentyone.exceptions.ExceptionMenu;
 

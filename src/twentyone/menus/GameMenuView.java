@@ -3,7 +3,7 @@ package twentyone.menus;
 import java.util.Scanner;
 import twentyone.control.GameMenuControl;
 import twentyone.interfaces.ShowHelp;
-import twentyone.game.TwentyOne;
+import twentyone.maingame.TwentyOne;
 
 /**
  * @author Kyle Russell

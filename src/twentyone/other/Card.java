@@ -1,4 +1,4 @@
-package twentyone.models;
+package twentyone.other;
 
 /**
  * @author Kyle Russell

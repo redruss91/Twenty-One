@@ -1,4 +1,4 @@
-package twentyone.game;
+package twentyone.maingame;
 
 /**
  *

@@ -1,10 +1,10 @@
 package twentyone.control;
 
 import twentyone.menus.GameMenuView;
-import twentyone.models.Dealer;
-import twentyone.game.TwentyOne;
+import twentyone.other.Dealer;
+import twentyone.maingame.TwentyOne;
 
-import static twentyone.game.TwentyOne.myDeck;
+import static twentyone.maingame.TwentyOne.myDeck;
 
 /**
  *

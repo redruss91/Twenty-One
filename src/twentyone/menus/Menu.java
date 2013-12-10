@@ -2,7 +2,7 @@
 package twentyone.menus;  
 
 import java.util.Scanner;
-import twentyone.interfaces.DisplayInfo;
+import twentyone.interfaces.InfoDisplay;
 import twentyone.interfaces.EnterInfo;
 import twentyone.exceptions.ExceptionMenu;
 
@@ -10,7 +10,7 @@ import twentyone.exceptions.ExceptionMenu;
 * @author Kyle Russell
 */
 
-public abstract class Menu implements DisplayInfo, EnterInfo{
+public abstract class Menu implements InfoDisplay, EnterInfo{
 
     private String[][] menuItems = null;
 
