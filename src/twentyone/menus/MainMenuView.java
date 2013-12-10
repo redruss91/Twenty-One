@@ -10,7 +10,6 @@ package twentyone.menus;
 
 import java.util.Scanner;
 
-import twentyone.models.Dealer;
 import twentyone.game.Game;
 import twentyone.game.TwentyOne;
 import twentyone.exceptions.ExceptionMenu;
