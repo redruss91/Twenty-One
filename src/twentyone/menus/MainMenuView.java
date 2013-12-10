@@ -35,14 +35,13 @@ public class MainMenuView extends Menu {
         
         String gameStatus = Game.PLAYING;
         do {
-            this.displayMenu();
-            // get commaned entered
+            this.display();
             String command = this.getCommand();
         try {
             switch (command) {
                 case "1":
                     GameMenuView myGameMenu = new GameMenuView();
-                    myGameMenu.displayMenu();
+                    myGameMenu.display();
                     myGameMenu.getInput();
                     break;
                 case "2":

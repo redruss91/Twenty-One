@@ -10,60 +10,6 @@ import twentyone.exceptions.ExceptionMenu;
 * @author Kyle Russell
 */
 
-public abstract class Menu implements DisplayInfo, EnterInfo {
-    short SuitNumber = 9824;
-    byte counter = 0;
-    char border;
-    private  String[][] menuItems = null;
-      
-
-    
-//    private MenuControl MenuControl = new MenuControl();
-    
-    public Menu() {
-    }
-    public Menu(String[][] menuItems) {
-        this();
-        this.menuItems = menuItems;
-    }
-    public void displayMenu(){
-
-            while (++counter < 25){
-                    border=(char)SuitNumber;
-                    System.out.print(border);
-                    if (SuitNumber > 9830) {    
-                        SuitNumber = 9824;
-                    } else {++SuitNumber;
-                    }      
-            }                           
-            System.out.println("\n\t Menu");
-            counter = 0;
-            while (++counter < 26){
-                    border=(char)SuitNumber;
-                    System.out.print("-");
- 
-            }  
-            System.out.println("");
-
-            for (int i = 0; i < menuItems.length; i++) {
-            System.out.println("\t" + menuItems[i][0] + " - " + menuItems[i][1]);
-        }
-            counter = 0;
-            while (++counter < 25){
-                    border=(char)SuitNumber;
-                    System.out.print(border);
-                    if (SuitNumber > 9830) {    
-                        SuitNumber = 9824;
-                    } else {++SuitNumber;
-                    }  
-            }  
-            counter = 0;
-            System.out.println("\nEnter your choice: ");
-        
-    
-                    
-             
-    }
 public abstract class Menu implements DisplayInfo, EnterInfo{
 
     private String[][] menuItems = null;
@@ -130,7 +76,6 @@ public abstract class Menu implements DisplayInfo, EnterInfo{
      * @return
      */
     public abstract String getInput() throws ExceptionMenu;
-}
 }
 
 

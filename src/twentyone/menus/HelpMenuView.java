@@ -33,7 +33,7 @@ public class HelpMenuView extends Menu {
         
         String gameStatus = "playing";
         do {
-            this.displayMenu();
+            this.display();
             
             String command = this.getCommand();
             switch (command) {
