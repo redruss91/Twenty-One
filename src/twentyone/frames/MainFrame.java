@@ -28,6 +28,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jpBody = new javax.swing.JPanel();
         jpTitle = new javax.swing.JPanel();
+        jlTitle = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -38,34 +39,43 @@ public class MainFrame extends javax.swing.JFrame {
         jpBody.setLayout(jpBodyLayout);
         jpBodyLayout.setHorizontalGroup(
             jpBodyLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 259, Short.MAX_VALUE)
+            .add(0, 0, Short.MAX_VALUE)
         );
         jpBodyLayout.setVerticalGroup(
             jpBodyLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(0, 192, Short.MAX_VALUE)
         );
 
+        jlTitle.setFont(new java.awt.Font("Brush Script Std", 1, 24)); // NOI18N
+        jlTitle.setText("Welcome to 21!");
+        jlTitle.setToolTipText("");
+
         org.jdesktop.layout.GroupLayout jpTitleLayout = new org.jdesktop.layout.GroupLayout(jpTitle);
         jpTitle.setLayout(jpTitleLayout);
         jpTitleLayout.setHorizontalGroup(
             jpTitleLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 0, Short.MAX_VALUE)
+            .add(jpTitleLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(jlTitle, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jpTitleLayout.setVerticalGroup(
             jpTitleLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 47, Short.MAX_VALUE)
+            .add(jpTitleLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(jlTitle, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(layout.createSequentialGroup()
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
                 .add(0, 139, Short.MAX_VALUE)
-                .add(jpBody, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-            .add(layout.createSequentialGroup()
-                .addContainerGap()
-                .add(jpTitle, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jpTitle, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jpBody, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -114,6 +124,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jlTitle;
     private javax.swing.JPanel jpBody;
     private javax.swing.JPanel jpTitle;
     // End of variables declaration//GEN-END:variables
