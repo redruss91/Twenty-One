@@ -3,6 +3,7 @@ package twentyone.maingame;
 import twentyone.other.Deck;
 import twentyone.menus.MainMenuView;
 import twentyone.exceptions.ExceptionMenu;
+import twentyone.frames.MainFrame;
 
 /**
  * @author K Russell
@@ -15,6 +16,9 @@ public class TwentyOne {
 
     
     public static void main(String[] args)  {
+        
+        MainFrame form = new MainFrame();
+        form.setVisible(true);
         try {
             TwentyOne myGame = new TwentyOne();
             System.out.println("\n" + "Welcome to 21.");

@@ -27,6 +27,12 @@ public class MainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jpBody = new javax.swing.JPanel();
+        jpMenuItems = new javax.swing.JPanel();
+        jbStart = new javax.swing.JButton();
+        jbHelp = new javax.swing.JButton();
+        jbExit = new javax.swing.JButton();
+        jtWelcome = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         jpTitle = new javax.swing.JPanel();
         jlTitle = new javax.swing.JLabel();
 
@@ -35,15 +41,68 @@ public class MainFrame extends javax.swing.JFrame {
         jpBody.setBackground(new java.awt.Color(255, 153, 153));
         jpBody.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jbStart.setText("Start Game");
+
+        jbHelp.setText("Help Menu");
+
+        jbExit.setText("Exit");
+        jbExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbExitActionPerformed(evt);
+            }
+        });
+
+        org.jdesktop.layout.GroupLayout jpMenuItemsLayout = new org.jdesktop.layout.GroupLayout(jpMenuItems);
+        jpMenuItems.setLayout(jpMenuItemsLayout);
+        jpMenuItemsLayout.setHorizontalGroup(
+            jpMenuItemsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jpMenuItemsLayout.createSequentialGroup()
+                .add(30, 30, 30)
+                .add(jbExit, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 61, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jpMenuItemsLayout.createSequentialGroup()
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(jpMenuItemsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING, false)
+                    .add(jbHelp, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(jbStart, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .add(18, 18, 18))
+        );
+        jpMenuItemsLayout.setVerticalGroup(
+            jpMenuItemsLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jpMenuItemsLayout.createSequentialGroup()
+                .add(29, 29, 29)
+                .add(jbStart)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(jbHelp)
+                .add(18, 18, 18)
+                .add(jbExit)
+                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jtWelcome.setViewportBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(10);
+        jTextArea1.setText("Welcome to 21! \n\nIs today your lucky day? \nDo you want to win big? \nWell now is your chance! \n\nCome and play a game of 21!");
+        jtWelcome.setViewportView(jTextArea1);
+
         org.jdesktop.layout.GroupLayout jpBodyLayout = new org.jdesktop.layout.GroupLayout(jpBody);
         jpBody.setLayout(jpBodyLayout);
         jpBodyLayout.setHorizontalGroup(
             jpBodyLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 0, Short.MAX_VALUE)
+            .add(jpBodyLayout.createSequentialGroup()
+                .add(jpMenuItems, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(jtWelcome)
+                .addContainerGap())
         );
         jpBodyLayout.setVerticalGroup(
             jpBodyLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 245, Short.MAX_VALUE)
+            .add(jpMenuItems, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .add(jpBodyLayout.createSequentialGroup()
+                .add(17, 17, 17)
+                .add(jtWelcome, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 191, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         jlTitle.setFont(new java.awt.Font("Brush Script Std", 1, 24)); // NOI18N
@@ -88,6 +147,16 @@ public class MainFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jbExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExitActionPerformed
+        this.dispose();
+        jbExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbExitActionPerformed(evt);
+            }
+        });
+        
+    }//GEN-LAST:event_jbExitActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -123,8 +192,14 @@ public class MainFrame extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JButton jbExit;
+    private javax.swing.JButton jbHelp;
+    private javax.swing.JButton jbStart;
     private javax.swing.JLabel jlTitle;
     private javax.swing.JPanel jpBody;
+    private javax.swing.JPanel jpMenuItems;
     private javax.swing.JPanel jpTitle;
+    private javax.swing.JScrollPane jtWelcome;
     // End of variables declaration//GEN-END:variables
 }
