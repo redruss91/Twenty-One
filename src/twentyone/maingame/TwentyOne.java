@@ -19,6 +19,7 @@ public class TwentyOne {
         
         MainFrame form = new MainFrame();
         form.setVisible(true);
+        
         try {
             TwentyOne myGame = new TwentyOne();
             System.out.println("\n" + "Welcome to 21.");

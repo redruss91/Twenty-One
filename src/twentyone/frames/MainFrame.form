@@ -121,6 +121,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Help Menu"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbHelpActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jbExit">
               <Properties>
@@ -148,6 +151,7 @@
           <SubComponents>
             <Component class="javax.swing.JTextArea" name="jTextArea1">
               <Properties>
+                <Property name="editable" type="boolean" value="false"/>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="10"/>
                 <Property name="text" type="java.lang.String" value="Welcome to 21! &#xa;&#xa;Is today your lucky day? &#xa;Do you want to win big? &#xa;Well now is your chance! &#xa;&#xa;Come and play a game of 21!"/>

@@ -3,6 +3,7 @@
  * and open the template in the editor.
  */
 package twentyone.frames;
+import twentyone.menus.HelpMenuFrame;
 
 /**
  *
@@ -10,10 +11,12 @@ package twentyone.frames;
  */
 public class MainFrame extends javax.swing.JFrame {
 
+    public static HelpMenuFrame help = new HelpMenuFrame();
     /**
      * Creates new form MainFrame
      */
     public MainFrame() {
+        
         initComponents();
     }
 
@@ -44,6 +47,11 @@ public class MainFrame extends javax.swing.JFrame {
         jbStart.setText("Start Game");
 
         jbHelp.setText("Help Menu");
+        jbHelp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbHelpActionPerformed(evt);
+            }
+        });
 
         jbExit.setText("Exit");
         jbExit.addActionListener(new java.awt.event.ActionListener() {
@@ -81,6 +89,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jtWelcome.setViewportBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(10);
         jTextArea1.setText("Welcome to 21! \n\nIs today your lucky day? \nDo you want to win big? \nWell now is your chance! \n\nCome and play a game of 21!");
@@ -150,12 +159,18 @@ public class MainFrame extends javax.swing.JFrame {
     private void jbExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExitActionPerformed
         this.dispose();
         jbExit.addActionListener(new java.awt.event.ActionListener() {
+            @Override
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbExitActionPerformed(evt);
             }
         });
         
     }//GEN-LAST:event_jbExitActionPerformed
+
+    private void jbHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbHelpActionPerformed
+        help.helpFrame();
+        
+    }//GEN-LAST:event_jbHelpActionPerformed
 
     /**
      * @param args the command line arguments
