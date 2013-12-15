@@ -4,6 +4,7 @@
  */
 package twentyone.frames;
 import twentyone.menus.HelpMenuFrame;
+import twentyone.guidisplay.GamePanelPlay;
 
 /**
  *
@@ -12,6 +13,7 @@ import twentyone.menus.HelpMenuFrame;
 public class MainFrame extends javax.swing.JFrame {
 
     public static HelpMenuFrame help = new HelpMenuFrame();
+    public static GamePanelPlay game = new GamePanelPlay();
     /**
      * Creates new form MainFrame
      */
@@ -45,6 +47,11 @@ public class MainFrame extends javax.swing.JFrame {
         jpBody.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jbStart.setText("Start Game");
+        jbStart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbStartActionPerformed(evt);
+            }
+        });
 
         jbHelp.setText("Help Menu");
         jbHelp.addActionListener(new java.awt.event.ActionListener() {
@@ -171,6 +178,10 @@ public class MainFrame extends javax.swing.JFrame {
         help.helpFrame();
         
     }//GEN-LAST:event_jbHelpActionPerformed
+
+    private void jbStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbStartActionPerformed
+        game.game();
+    }//GEN-LAST:event_jbStartActionPerformed
 
     /**
      * @param args the command line arguments

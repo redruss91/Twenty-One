@@ -7,7 +7,7 @@ public class Results {
      
     public void displayResults() {
  
-        System.out.println("\n" + Player.nameInput + "'s Results\n\n21!: " + this.is21() + " Lost: " 
+        System.out.println("\n" + "Player One" + "'s Results\n\n21!: " + this.is21() + " Lost: " 
                 + this.isLoser() +"\n");
    
     }
