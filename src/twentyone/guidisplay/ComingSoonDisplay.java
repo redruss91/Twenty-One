@@ -4,17 +4,17 @@
  */
 package twentyone.guidisplay;
 
-import twentyone.frames.game.GameMenu;
+import twentyone.frames.game.ComingSoon;
 
 /**
  *
  * @author aziekayrussell
  */
-public class GamePanelPlay {
-    
-    public void game(){
-        
-        GameMenu form = new GameMenu();
+public class ComingSoonDisplay {
+  
+    public void ComingSoonFrame(){
+        ComingSoon form = new ComingSoon(); 
         form.setVisible(true);
     }
+    
 }

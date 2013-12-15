@@ -2,6 +2,8 @@ package twentyone.maingame;
 
 import twentyone.other.Card;
 
+
+
 public class Hand {
     int place = 2;
      Card[] hand = new Card[5];

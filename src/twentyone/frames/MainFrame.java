@@ -4,7 +4,7 @@
  */
 package twentyone.frames;
 import twentyone.menus.HelpMenuFrame;
-import twentyone.guidisplay.GamePanelPlay;
+import twentyone.guidisplay.ComingSoonDisplay;
 
 /**
  *
@@ -13,7 +13,7 @@ import twentyone.guidisplay.GamePanelPlay;
 public class MainFrame extends javax.swing.JFrame {
 
     public static HelpMenuFrame help = new HelpMenuFrame();
-    public static GamePanelPlay game = new GamePanelPlay();
+    public static ComingSoonDisplay soon = new ComingSoonDisplay();
     /**
      * Creates new form MainFrame
      */
@@ -180,7 +180,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jbHelpActionPerformed
 
     private void jbStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbStartActionPerformed
-        game.game();
+        soon.ComingSoonFrame();
     }//GEN-LAST:event_jbStartActionPerformed
 
     /**

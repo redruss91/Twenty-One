@@ -8,9 +8,7 @@ public class Card {
     private String rank;
     private char suit;// 9827 Club, 9824 Spade, 9829 Heart, 9830 Diamond
     private int cardValue;
-    public String suit1;
     public String cardDisplay;
-    public String card;
     
     public String toString() {
         return cardDisplay;
@@ -20,7 +18,7 @@ public class Card {
         return cardValue;
     }
     
-    public String Card() {
+    public Card() {
         int rndNumber;   //Random Number for generating card values
         rndNumber = (int) (Math.random()*13+1);
 
@@ -45,19 +43,13 @@ public class Card {
         // 9827 Club, 9824 Spade, 9829 Heart, 9830 Diamond
         if (rndNumber == 1) {
             suit = 9824;
-            suit1 = "S";
         } else if (rndNumber == 2) {
             suit = 9827;
-            suit1 = "C";
         } else if (rndNumber == 3) {
             suit = 9829;
-            suit1 = "H";
         } else if (rndNumber == 4) {
             suit = 9830;
-            suit1 = "D";
         }
-        
-        return card = rank + suit1 + ".png";
-        
+        cardDisplay = this.rank + "" + this.suit;
     }
 }

@@ -34,8 +34,8 @@ public class GameMenuControl {
 
                     myDeck.initDeck();
                     myDeck.shuffleDeck();
-                    for (int i = 0; i< TwentyOne.myPlayer.numberofPlayers; i++ ){
-                    System.out.println(TwentyOne.myPlayer.currentPlayer(i) + "'s Turn");
+                    for (int i = 0; i< 1; i++ ){
+                    System.out.println("Player's Turn");
                     TwentyOne.myHand.initHand();
                     TwentyOne.myHand.displayHand();
                             

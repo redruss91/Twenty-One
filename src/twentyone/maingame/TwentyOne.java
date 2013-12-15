@@ -17,7 +17,7 @@ public class TwentyOne {
     
     public static void main(String[] args)  {
         
-        MainFrame form = new MainFrame();
+         MainFrame form = new MainFrame();
         form.setVisible(true);
         
         try {
