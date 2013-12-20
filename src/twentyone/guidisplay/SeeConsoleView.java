@@ -4,16 +4,17 @@
  */
 package twentyone.guidisplay;
 
-import twentyone.frames.game.ComingSoon;
+import twentyone.frames.game.SeeConsole;
 
 /**
  *
  * @author aziekayrussell
  */
-public class ComingSoonDisplay {
+public class SeeConsoleView {
   
-    public void ComingSoonFrame(){
-        ComingSoon form = new ComingSoon(); 
+    public void seeConsole(){
+        
+        SeeConsole form = new SeeConsole(); 
         form.setVisible(true);
     }
     

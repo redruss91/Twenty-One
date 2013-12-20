@@ -29,7 +29,7 @@ public class GameMenuView extends Menu implements ShowHelp {
         String gameStatus = "waiting";
         do {
 
-            
+            this.display();
             
             String command = getCommand();
             try{

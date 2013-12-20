@@ -4,7 +4,9 @@
  */
 package twentyone.frames;
 import twentyone.menus.HelpMenuFrame;
-import twentyone.guidisplay.ComingSoonDisplay;
+import twentyone.maingame.PlayGame;
+import twentyone.guidisplay.SeeConsoleView;
+
 
 /**
  *
@@ -13,7 +15,8 @@ import twentyone.guidisplay.ComingSoonDisplay;
 public class MainFrame extends javax.swing.JFrame {
 
     public static HelpMenuFrame help = new HelpMenuFrame();
-    public static ComingSoonDisplay soon = new ComingSoonDisplay();
+    public static PlayGame game = new PlayGame();
+    public static SeeConsoleView console = new SeeConsoleView();
     /**
      * Creates new form MainFrame
      */
@@ -180,7 +183,10 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jbHelpActionPerformed
 
     private void jbStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbStartActionPerformed
-        soon.ComingSoonFrame();
+        
+        console.seeConsole();
+        this.dispose();
+        
     }//GEN-LAST:event_jbStartActionPerformed
 
     /**

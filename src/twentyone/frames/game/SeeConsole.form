@@ -62,10 +62,10 @@
             <Property name="editable" type="boolean" value="false"/>
             <Property name="columns" type="int" value="20"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Monotype Corsiva" size="48" style="1"/>
+              <Font name="Monotype Corsiva" size="24" style="1"/>
             </Property>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="&#xa;&#xa;COMING SOON!"/>
+            <Property name="text" type="java.lang.String" value="&#xa;&#xa;&#xa;&#x9;Please See the &#xa;&#x9;Console to Continue"/>
           </Properties>
         </Component>
       </SubComponents>

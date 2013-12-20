@@ -44,8 +44,9 @@ public class MainMenuView extends Menu {
                     myGameMenu.getInput();
                     break;
                 case "2":
-                    HelpMenuView myHelpMenu = new HelpMenuView();
-                    myHelpMenu.getInput();
+                    HelpMenuFrame myHelpMenu = new HelpMenuFrame();
+                    myHelpMenu.helpFrame();
+                    
 
                     break;
                 case "3":

@@ -4,16 +4,18 @@
  */
 package twentyone.frames.game;
 
+import twentyone.menus.GameMenuView;
+
 /**
  *
  * @author aziekayrussell
  */
-public class ComingSoon extends javax.swing.JFrame {
-
+public class SeeConsole extends javax.swing.JFrame {
+    public static GameMenuView gameMenu = new GameMenuView();
     /**
      * Creates new form ComingSoon
      */
-    public ComingSoon() {
+    public SeeConsole() {
         initComponents();
     }
 
@@ -34,9 +36,9 @@ public class ComingSoon extends javax.swing.JFrame {
 
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Monotype Corsiva", 1, 48)); // NOI18N
+        jTextArea1.setFont(new java.awt.Font("Monotype Corsiva", 1, 24)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setText("\n\nCOMING SOON!");
+        jTextArea1.setText("\n\n\n\tPlease See the \n\tConsole to Continue");
         jScrollPane1.setViewportView(jTextArea1);
 
         jbExit.setText("Exit");
@@ -74,6 +76,7 @@ public class ComingSoon extends javax.swing.JFrame {
 
     private void jbExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExitActionPerformed
         this.dispose();
+        gameMenu.getInput();
     }//GEN-LAST:event_jbExitActionPerformed
 
     /**
@@ -93,20 +96,20 @@ public class ComingSoon extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ComingSoon.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SeeConsole.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ComingSoon.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SeeConsole.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ComingSoon.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SeeConsole.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ComingSoon.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SeeConsole.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ComingSoon().setVisible(true);
+                new SeeConsole().setVisible(true);
             }
         });
     }
